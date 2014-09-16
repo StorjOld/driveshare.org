@@ -91,11 +91,14 @@ a {
   padding: 30px;
 }
 
+.grey {
+  background: #f9f9f9;
+}
+
 ::selection {
   background: #107fc9;
   color: #fff;
 }
-
 ::-moz-selection {
   background: #107fc9;
   color: #fff;
@@ -113,13 +116,11 @@ a {
   top: 0;
   left: 0;
   height: 3px;
-
   -webkit-transition: width 1s;
   -moz-transition: width 1s;
   -o-transition: width 1s;
   transition: width 1s;
 }
-
 .pace-inactive {
   display: none;
 }
@@ -162,6 +163,7 @@ a {
 .btn-c2a {
   margin: 10px 5px 0;
 }
+
 
 /*
  * Cover
@@ -313,6 +315,7 @@ a {
   height: 372px;
 }
 
+
 /*
  * Features
  */
@@ -320,10 +323,6 @@ a {
 .features {
   padding: 100px 0;
   text-align: left;
-}
-
-.grey {
-  background: #f9f9f9;
 }
 
 .features-icons {
@@ -391,6 +390,7 @@ a {
 
 .footer {
   padding: 40px 0;
+  background: #107fc9;
   background: rgba(0, 0, 0, 0.5);
   margin-top: 100px;
 }
@@ -412,7 +412,6 @@ a {
   height: 55px;
   margin: 10px;
 }
-
 
 
 /*
@@ -437,11 +436,9 @@ a {
 }
 
 
-
 /*
  * Responsiveness
 */
-
 
 @media all and (max-width: 1200px) and (min-width: 990px) {
   .features-icon-2 {
