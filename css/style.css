@@ -475,13 +475,23 @@ a {
   .email {
     font-size: 12px;
     height: 61px;
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
   }
   .btn-signup {
     padding: 20px 10px;
     font-size: 12px;
+    border-bottom-left-radius: 4px !important;
+    border-top-left-radius: 4px !important;
   }
  .input-group {
     width: 100%;
+  }
+  .input-group-btn {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 15px;
   }
   .title {
     font-size: 42px;
