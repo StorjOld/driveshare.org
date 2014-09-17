@@ -533,4 +533,7 @@ a {
   .footer-links {
     display: block;
   }
+  .footer-link {
+    margin-left: 0;
+  }
 }
