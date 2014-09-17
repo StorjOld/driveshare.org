@@ -367,6 +367,7 @@ a {
 
 .c2a-section .divider {
   background-color: #76b2d9;
+  margin: 30px auto;
 }
 
 .c2a-section .title {
@@ -376,7 +377,8 @@ a {
 
 .c2a-section .subtitle {
   color: #fff;
-  padding: 10px 60px 30px;
+  max-width: 600px;
+  margin: 0 auto 40px;
 }
 
 .c2a-section .input-group {
@@ -517,7 +519,7 @@ a {
     background-position: center center;
     width: auto;
     left: 0;
-}
+  }
   .c2a-section {
     padding: 60px 0 0;
   }
