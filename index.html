@@ -91,7 +91,7 @@
               <div class="col-xs-12 col-sm-6 col-md-7">
                 <h3 class="subtitle visible-xs">If you rented out</h3>
                 <div class="input-group">
-                  <input class="form-control calculator-value calculator-space" type="number" min="0" placeholder="1000">
+                  <input class="form-control calculator-value calculator-space" type="number" min="0" value="1000">
                   <div class="input-group-addon">GB</div>
                 </div>
                 <h3 class="subtitle visible-xs">on your hard drive at</h3>
@@ -108,7 +108,7 @@
                 <h3 class="subtitle visible-xs">you could earn</h3>
                 <div class="input-group calculator-price-group">
                   <div class="input-group-addon">$</div>
-                  <input class="form-control calculator-value calculator-price" type="number" min="0" placeholder="9.99" readonly>
+                  <input class="form-control calculator-value calculator-price" type="number" min="0" value="9.99" readonly>
                   <div class="input-group-addon">monthly</div>
                 </div>
               </div>
@@ -230,7 +230,7 @@
           var space = parseFloat($('.calculator-space').val());
           var provider = parseFloat($('.calculator-provider').val());
           total += parseFloat(space * provider) || 0;
-          $('.calculator-price').attr('placeholder',total);
+          $('.calculator-price').val(total);
         });
       });
     </script>
