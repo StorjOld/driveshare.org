@@ -229,7 +229,7 @@
           var total = 0;
           var space = parseFloat($('.calculator-space').val());
           var provider = parseFloat($('.calculator-provider').val());
-          total += parseFloat(space * provider) || 0;
+          total += parseFloat((space * provider).toFixed(2)) || 0;
           $('.calculator-price').val(total);
         });
       });
