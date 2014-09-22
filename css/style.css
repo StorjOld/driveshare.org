@@ -333,6 +333,12 @@ a {
   margin: 0 auto;
   border-radius: 4px;
 }
+.features-icon-0 {
+  background-image: url('../img/features-0.jpg');
+  position: relative;
+  left: 15px;
+  top: 20px;
+}
 .features-icon-1 {
   background-image: url('../img/features-1.jpg');
 }
@@ -350,6 +356,66 @@ a {
   overflow: auto; 
   max-width: 515px;
 }
+
+
+/*
+ * Calculator
+ */
+
+
+.calculator input,
+.calculator select {
+  display: inline-block;
+  width: auto;
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+}
+
+.calculator-price {
+  background-color: #fff !important;
+  cursor: default !important;
+}
+
+.calculator .input-group {
+  width: auto;
+  margin: 9px auto;
+  font-family: "Questrial", sans-serif;
+}
+
+.calculator .subtitle {
+  line-height: 38px;
+  margin: 7px 0;
+}
+
+.calculator .input-group-addon:last-child {
+  width: 100px;
+  color: #A2A2A2;
+  background: #f9f9f9;
+  padding-left: 20px;
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  text-align: left;
+}
+
+.calculator .input-group-addon:first-child {
+  background: #f9f9f9;
+  border: 1px solid #E4E4E4;
+  border-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
+
+.calculator .promise {
+  color: #D1D1D1;
+  font-family: "Questrial", sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
 
 
 /*
@@ -426,6 +492,9 @@ a {
     background-size: 378px 235px;
     background-repeat: no-repeat;
   }
+  .features-icon-0 {
+    background-image: url('../img/features-0@2x.jpg');
+  }
   .features-icon-1 {
     background-image: url('../img/features-1@2x.jpg');
   }
@@ -443,10 +512,10 @@ a {
 */
 
 @media all and (max-width: 1200px) and (min-width: 990px) {
-  .features-icon-2 {
+  .features-icon-right {
     margin-right: 0;
   }
-  .features-text-2 {
+  .features-text-left {
     padding-left: 0;
     margin-left: -20px;
   }
@@ -471,7 +540,23 @@ a {
     text-align: center;
     max-width: 100%;
   }
+  .calculator .input-group {
+    width: 260px;
+  }
+  .calculator-text {
+    text-align: right;
+  }
+  .calculator .promise {
+    text-align: center;
+  }
 }
+
+@media all and (max-width: 990px) and (min-width: 768px) {
+  .calculator .input-group {
+    margin-left: 0;
+  }
+}
+
 
 @media all and (max-width: 480px) {
   .email {
@@ -519,6 +604,23 @@ a {
     background-position: center center;
     width: auto;
     left: 0;
+  }
+  .calculator .input-group {
+    margin: 0 auto;
+}
+  .calculator .input-group-addon:last-child {
+    width: 85px;
+    padding-left: 10px;
+  }
+  .calculator .subtitle {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Montserrat",sans-serif;
+    color: #ADADAD;
+  }
+  .calculator-promise {
+    padding: 20px;
   }
   .c2a-section {
     padding: 60px 0 0;

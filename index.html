@@ -70,6 +70,56 @@
       </div>
     </div>
 
+    <div class="features grey">    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-push-6">
+            <div class="features-icons features-icon-0 features-icon-right"></div>
+          </div>
+          <div class="col-md-6 col-md-pull-5 features-text features-text-left calculator form-group">
+            <span class="intro">Earnings Calculator</span>
+            <h1 class="title-sm">How much do I make?*</h1>
+            <div class="divider"></div>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-5 calculator-text hidden-xs">
+                <h3 class="subtitle">If you rented out</h3>
+                <h3 class="subtitle">on your hard drive at</h3>
+                <h3 class="subtitle">you could earn</h3>
+              </div>
+
+              <div class="col-xs-12 col-sm-6 col-md-7">
+                <h3 class="subtitle visible-xs">If you rented out</h3>
+                <div class="input-group">
+                  <input class="form-control calculator-value calculator-space" type="text" placeholder="1000">
+                  <div class="input-group-addon">GB</div>
+                </div>
+                <h3 class="subtitle visible-xs">on your hard drive at</h3>
+                <div class="input-group calculator-provider-group">
+                  <select class="form-control calculator-value calculator-provider">
+                    <option value="0.00999">Dropbox</option>
+                    <option value="0.00999">Google Drive</option>
+                    <option value="0.01999">OneDrive</option>
+                    <option value="0.04">Box.net</option>
+                    <option value="0.5">Amazon Cloud Drive</option>
+                  </select>
+                  <div class="input-group-addon">rates</div>
+                </div>
+                <h3 class="subtitle visible-xs">you could earn</h3>
+                <div class="input-group calculator-price-group">
+                  <div class="input-group-addon">$</div>
+                  <input class="form-control calculator-value calculator-price" type="text" placeholder="9.99" readonly>
+                  <div class="input-group-addon">monthly</div>
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <span class="promise">*Not a guarantee. earnings are based on full network availability and demand.</span>
+          </div>
+        </div> 
+      </div> 
+    </div>
+
     <div class="features">    
       <div class="container">
         <div class="row">
@@ -90,9 +140,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-6">
-            <div class="features-icons features-icon-2"></div>
+            <div class="features-icons features-icon-2 features-icon-right"></div>
           </div>
-          <div class="col-md-6 col-md-pull-5 features-text features-text-2">
+          <div class="col-md-6 col-md-pull-5 features-text features-text-left">
             <span class="intro">MIT Licence</span>
             <h1 class="title-sm">Open-Source</h1>
             <div class="divider"></div>
@@ -173,6 +223,12 @@
         });
         $('#signup-footer').on('click', function() {
           ga('send', 'event', 'SignUp', 'Newsletter', 'Footer', 1);
+        });
+
+        $('.calculator-value').bind("keyup change", function(e) {
+          var space = parseFloat($('.calculator-space').val());
+          var provider = parseFloat($('.calculator-provider').val());
+          $('.calculator-price').attr('placeholder',space * provider);
         });
       });
     </script>
