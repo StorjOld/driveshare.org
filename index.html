@@ -253,9 +253,17 @@
           $('.calculator-price').val(total);
         });
 
-        $.getJSON("https://live.driveshare.org/api/downstream/v1/status/list/by/d/uptime", function(json) {
-          var farmersCount = $.grep(json.farmers, function(n){ return n.online }).length;
-          var countriesCount = json.countries.length;
+       $.getJSON("https://live.driveshare.org/api/downstream/v1/status/list/by/d/uptime", function(json) {
+          var farmers = $.grep(json.farmers, function(n){ return n.online });
+          var farmersCount = farmers.length;
+          var countries = [];
+          for (var j = 0; j < farmersCount; j++) {
+              var country = farmers[j].location.country;
+              if (countries.indexOf(country) === -1) {
+                  countries.push(country);
+              }
+          }
+          var countriesCount = countries.length;
           $('.farmers-count').html(farmersCount);
           $('.countries-count').html(countriesCount);
         });
