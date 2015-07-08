@@ -672,6 +672,11 @@ a:hover {
   .calculator .promise {
     text-align: center;
   }
+  .nav-tabs>li {
+    float: none;
+    width: 45%;
+    display: inline-block;
+  }
 }
 
 @media all and (max-width: 990px) and (min-width: 768px) {
