@@ -149,7 +149,7 @@
                     <h3 class="subtitle">Number of drives</h3>
                     <h3 class="subtitle">Power usage</h3>
                     <h3 class="subtitle">Electricity cost</h3>
-                    <h3 class="subtitle">Daily uptime</h3>
+                    <!-- <h3 class="subtitle">Daily uptime</h3> -->
                     <h3 class="subtitle">You could earn</h3>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-7">
@@ -173,12 +173,11 @@
                       <input class="form-control adv-calculator-value" id="txtElectricityCost" type="number" min="0" value="0.12">
                       <div class="input-group-addon">$/kWh</div>
                     </div>
-                    <h3 class="subtitle visible-xs">Daily uptime</h3>
+                    <!-- <h3 class="subtitle visible-xs">Daily uptime</h3>
                     <div class="input-group">
                       <input class="form-control adv-calculator-value" id="txtUptime" type="number" min="0" max="24" value="4">
                       <div class="input-group-addon">hours</div>
-                    </div>
-                    <!-- <button type="button" id="btnCalculate">Show Me The Money</button> -->
+                    </div> -->
                     <h3 class="subtitle visible-xs">You could earn</h3>
                     <div class="input-group">
                       <div class="input-group-addon">$</div>
@@ -389,7 +388,8 @@
             var powerUsage = $("#txtPowerUsage").val();
             var electricityCost = $("#txtElectricityCost").val();
             var drivesNumber = $("#txtDrives").val();
-            var uptime = $("#txtUptime").val();
+            // var uptime = $("#txtUptime").val();
+            var uptime = 4;
             
             var elecCost = badRound(calculateElecCost(powerUsage, electricityCost, drivesNumber, uptime), 2);
             var revenue = badRound(calculateRevenue(spaceForRent, .03), 2);
