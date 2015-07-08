@@ -63,7 +63,7 @@
               <h1 class="cover-heading">
                 Earn money by sharing your<br class="visible-xs visible-sm"> extra hard drive space
               </h1>
-              <p class="cover-description">There are <span class="farmers-count"></span> live beta testers from <span class="countries-count"></span> countries.<br>Check the DriveShare farmers on the <a href="http://live.driveshare.org" class="link">Live Dashboard</a>.</p>
+              <!-- <p class="cover-description">There are <span class="farmers-count"></span> live beta testers from <span class="countries-count"></span> countries.<br>Check the DriveShare farmers on the <a href="http://live.driveshare.org" class="link">Live Dashboard</a>.</p> -->
               <form class="form-inline validate cover-signup" role="form" action="http://storj.us8.list-manage.com/subscribe/post?u=edba9fc4ce8b9095a31859cba&amp;id=0b1509efa2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
                 <div class="input-group">
                   <input type="email" name="EMAIL" id="mce-EMAIL" class="email form-control" placeholder="Enter your email here" spellcheck="false">
@@ -311,78 +311,78 @@
           $('.calculator-price').val(total);
         });
 
-      // calculates momthly cost of running a PC 24/7 for
-      // PC purchase price in dollars, PC power consumption in watts, 
-      // electricty rates in dollars/kilowatt hour, number of drives in PC.
-      function calculateCost(pcCost, pcPowerConsumption, elecRate, drives, regularUptime)
-      {
-          var HARD_DRIVE_COST = 60,    // cost in dollars of a hard drive
-              ANNUITIZATION_YEARS = 4, // years to annuitize the investment
-              HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
-          
-          var cost,           // total monthly cost of running the system
-              perDriveCost,   // cost per additional hard drive
-              additionalCost; // cost of changing from normal computer use to 100% uptime
-          
-          // monthly per-drive cost = drive's annuitized cost + electricity costs
-          perDriveCost = (HARD_DRIVE_COST / (12 * ANNUITIZATION_YEARS)) +
-              (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
-          
-          // monthly PC cost = annuitized cost + 
-          // electricity costs + per drive cost for drives beyond the first
-          cost = (pcCost / (12 * ANNUITIZATION_YEARS)) + 
-              (pcPowerConsumption * (30 * 24) * elecRate / 1000) +
-              ((drives - 1) * perDriveCost);
-          
-           additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
-          
-          return additionalCost;
-      }
+        // calculates momthly cost of running a PC 24/7 for
+        // PC purchase price in dollars, PC power consumption in watts, 
+        // electricty rates in dollars/kilowatt hour, number of drives in PC.
+        function calculateCost(pcCost, pcPowerConsumption, elecRate, drives, regularUptime)
+        {
+            var HARD_DRIVE_COST = 60,    // cost in dollars of a hard drive
+                ANNUITIZATION_YEARS = 4, // years to annuitize the investment
+                HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
+            
+            var cost,           // total monthly cost of running the system
+                perDriveCost,   // cost per additional hard drive
+                additionalCost; // cost of changing from normal computer use to 100% uptime
+            
+            // monthly per-drive cost = drive's annuitized cost + electricity costs
+            perDriveCost = (HARD_DRIVE_COST / (12 * ANNUITIZATION_YEARS)) +
+                (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
+            
+            // monthly PC cost = annuitized cost + 
+            // electricity costs + per drive cost for drives beyond the first
+            cost = (pcCost / (12 * ANNUITIZATION_YEARS)) + 
+                (pcPowerConsumption * (30 * 24) * elecRate / 1000) +
+                ((drives - 1) * perDriveCost);
+            
+             additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
+            
+            return additionalCost;
+        }
 
-      // same as above, but not annuitizing PC of HDD costs
-      function calculateElecCost(pcPowerConsumption, elecRate, drives, regularUptime)
-      {
-          var HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
-          
-          var cost,           // total monthly cost of running the system
-              perDriveCost,   // cost per additional hard drive
-              additionalCost; // cost of changing from normal computer use to 100% uptime
-          
-          // monthly per-drive cost = electricity costs
-          perDriveCost = (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
-          
-          // monthly PC cost = electricity costs + per drive cost for drives beyond the first
-          cost = (pcPowerConsumption * (30 * 24) * elecRate / 1000) + ((drives - 1) * perDriveCost);
-          
-          additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
-          
-          return additionalCost;
-      }
+        // same as above, but not annuitizing PC of HDD costs
+        function calculateElecCost(pcPowerConsumption, elecRate, drives, regularUptime)
+        {
+            var HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
+            
+            var cost,           // total monthly cost of running the system
+                perDriveCost,   // cost per additional hard drive
+                additionalCost; // cost of changing from normal computer use to 100% uptime
+            
+            // monthly per-drive cost = electricity costs
+            perDriveCost = (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
+            
+            // monthly PC cost = electricity costs + per drive cost for drives beyond the first
+            cost = (pcPowerConsumption * (30 * 24) * elecRate / 1000) + ((drives - 1) * perDriveCost);
+            
+            additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
+            
+            return additionalCost;
+        }
 
-      // calculates revenue from storage space in GB and a rate in dollars per GB 
-      function calculateRevenue(storageSpace, rate)
-      {   
-          return storageSpace * rate;
-      }
+        // calculates revenue from storage space in GB and a rate in dollars per GB 
+        function calculateRevenue(storageSpace, rate)
+        {   
+            return storageSpace * rate;
+        }
 
-      // caclulates your profit in dollars from your cost and revenue
-      function calculateProfit(cost, revenue)
-      {
-          return revenue - cost;
-      }
+        // caclulates your profit in dollars from your cost and revenue
+        function calculateProfit(cost, revenue)
+        {
+            return revenue - cost;
+        }
 
-      // calculates rate to break even. Expressed in dollars/gb/month
-      function calculateBreakEvenRate(cost, space)
-      {
-          return cost / space;
-      }
+        // calculates rate to break even. Expressed in dollars/gb/month
+        function calculateBreakEvenRate(cost, space)
+        {
+            return cost / space;
+        }
 
-      // a terrible rounding function
-      function badRound(number, places)
-      {
-          var expansion = Math.pow(10,places);
-          return Math.round(number * expansion) / expansion;
-      }
+        // a terrible rounding function
+        function badRound(number, places)
+        {
+            var expansion = Math.pow(10,places);
+            return Math.round(number * expansion) / expansion;
+        }
 
         $('.adv-calculator-value').bind("keyup change", function(e) {
             var spaceForRent = $("#txtSpaceForRent").val();
