@@ -94,45 +94,102 @@
           <div class="col-md-6 features-text calculator form-group">
             <span class="intro">Earnings Calculator</span>
             <h1 class="title-sm">How much could you make?*</h1>
-            <div class="divider"></div>
 
-            <div class="row">
-              <div class="col-sm-6 col-md-5 calculator-text hidden-xs">
-                <h3 class="subtitle">If you rented out</h3>
-                <h3 class="subtitle">on your hard drive at</h3>
-                <h3 class="subtitle">you could earn</h3>
+            <!-- Calc tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#calc-simple" aria-controls="calc-simple" role="tab" data-toggle="tab">Simple</a></li>
+              <li role="presentation"><a href="#calc-advanced" aria-controls="calc-advanced" role="tab" data-toggle="tab">Advanced</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="calc-simple">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5 calculator-text hidden-xs">
+                    <h3 class="subtitle">If you rented out</h3>
+                    <h3 class="subtitle">on your hard drive at</h3>
+                    <h3 class="subtitle">you could earn</h3>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-7">
+                    <h3 class="subtitle visible-xs">If you rented out</h3>
+                    <div class="input-group">
+                      <input class="form-control calculator-value calculator-space" type="number" min="0" value="1000">
+                      <div class="input-group-addon">GB</div>
+                    </div>
+                    <h3 class="subtitle visible-xs">on your hard drive at</h3>
+                    <div class="input-group calculator-provider-group">
+                      <select class="form-control calculator-value calculator-provider">
+                        <option value="0.00999">Dropbox</option>
+                        <option value="0.00999">Google Drive</option>
+                        <option value="0.01999">OneDrive</option>
+                        <option value="0.06">Box.net</option>
+                        <option value="0.041667">Amazon Cloud Drive</option>
+                        <option value="0.059838">ZipCloud</option>
+                        <option value="0.07326">Mozy</option>
+                        <option value="0.083325">SugarSync</option>
+                        <option value="0.01">BitCasa</option>
+                        <option value="0.025">Mega</option>
+                      </select>
+                      <div class="input-group-addon">rates</div>
+                    </div>
+                    <h3 class="subtitle visible-xs">you could earn</h3>
+                    <div class="input-group">
+                      <div class="input-group-addon">$</div>
+                      <input class="form-control calculator-value calculator-price" type="number" min="0" value="9.99" readonly>
+                      <div class="input-group-addon">monthly</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-7">
-                <h3 class="subtitle visible-xs">If you rented out</h3>
-                <div class="input-group">
-                  <input class="form-control calculator-value calculator-space" type="number" min="0" value="1000">
-                  <div class="input-group-addon">GB</div>
-                </div>
-                <h3 class="subtitle visible-xs">on your hard drive at</h3>
-                <div class="input-group calculator-provider-group">
-                  <select class="form-control calculator-value calculator-provider">
-                    <option value="0.00999">Dropbox</option>
-                    <option value="0.00999">Google Drive</option>
-                    <option value="0.01999">OneDrive</option>
-                    <option value="0.06">Box.net</option>
-                    <option value="0.041667">Amazon Cloud Drive</option>
-                    <option value="0.059838">ZipCloud</option>
-                    <option value="0.07326">Mozy</option>
-                    <option value="0.083325">SugarSync</option>
-                    <option value="0.01">BitCasa</option>
-                    <option value="0.025">Mega</option>
-                  </select>
-                  <div class="input-group-addon">rates</div>
-                </div>
-                <h3 class="subtitle visible-xs">you could earn</h3>
-                <div class="input-group calculator-price-group">
-                  <div class="input-group-addon">$</div>
-                  <input class="form-control calculator-value calculator-price" type="number" min="0" value="9.99" readonly>
-                  <div class="input-group-addon">monthly</div>
+              <div role="tabpanel" class="tab-pane fade" id="calc-advanced">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5 calculator-text hidden-xs">
+                    <h3 class="subtitle">Available space</h3>
+                    <h3 class="subtitle">Number of drives</h3>
+                    <h3 class="subtitle">Power usage</h3>
+                    <h3 class="subtitle">Electricity cost</h3>
+                    <h3 class="subtitle">Daily uptime</h3>
+                    <h3 class="subtitle">You could earn</h3>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-7">
+                    <h3 class="subtitle visible-xs">Available space</h3>
+                    <div class="input-group">
+                      <input class="form-control adv-calculator-value" id="txtSpaceForRent" type="number" min="0" value="8000">
+                      <div class="input-group-addon">GB</div>
+                    </div>
+                    <h3 class="subtitle visible-xs">Number of drives</h3>
+                    <div class="input-group">
+                      <input class="form-control adv-calculator-value" id="txtDrives" type="number" min="1" value="4">
+                      <div class="input-group-addon">drives</div>
+                    </div>
+                    <h3 class="subtitle visible-xs">Power usage</h3>
+                    <div class="input-group">
+                      <input class="form-control adv-calculator-value" id="txtPowerUsage" type="number" min="0" value="75">
+                      <div class="input-group-addon">W</div>
+                    </div>
+                    <h3 class="subtitle visible-xs">Electricity cost</h3>
+                    <div class="input-group">
+                      <input class="form-control adv-calculator-value" id="txtElectricityCost" type="number" min="0" value="0.12">
+                      <div class="input-group-addon">$/kWh</div>
+                    </div>
+                    <h3 class="subtitle visible-xs">Daily uptime</h3>
+                    <div class="input-group">
+                      <input class="form-control adv-calculator-value" id="txtUptime" type="number" min="0" max="24" value="4">
+                      <div class="input-group-addon">hours</div>
+                    </div>
+                    <!-- <button type="button" id="btnCalculate">Show Me The Money</button> -->
+                    <h3 class="subtitle visible-xs">You could earn</h3>
+                    <div class="input-group">
+                      <div class="input-group-addon">$</div>
+                      <input id="lblProfit" class="form-control adv-calculator-value adv-calculator-price" type="number" min="0" value="231.36" readonly>
+                      <div class="input-group-addon">monthly</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
             <div class="divider"></div>
             <span class="promise">*Not a guarantee. Earnings are based on full network availability and demand.</span>
           </div>
@@ -224,6 +281,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -236,6 +294,7 @@
     </script>
 
     <script>
+
       $(function() {
         $('#signup-header').on('click', function() {
           ga('send', 'event', 'SignUp', 'Newsletter', 'Header', 1);
@@ -250,6 +309,93 @@
           var provider = parseFloat($('.calculator-provider').val());
           total += parseFloat((space * provider).toFixed(2)) || 0;
           $('.calculator-price').val(total);
+        });
+
+      // calculates momthly cost of running a PC 24/7 for
+      // PC purchase price in dollars, PC power consumption in watts, 
+      // electricty rates in dollars/kilowatt hour, number of drives in PC.
+      function calculateCost(pcCost, pcPowerConsumption, elecRate, drives, regularUptime)
+      {
+          var HARD_DRIVE_COST = 60,    // cost in dollars of a hard drive
+              ANNUITIZATION_YEARS = 4, // years to annuitize the investment
+              HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
+          
+          var cost,           // total monthly cost of running the system
+              perDriveCost,   // cost per additional hard drive
+              additionalCost; // cost of changing from normal computer use to 100% uptime
+          
+          // monthly per-drive cost = drive's annuitized cost + electricity costs
+          perDriveCost = (HARD_DRIVE_COST / (12 * ANNUITIZATION_YEARS)) +
+              (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
+          
+          // monthly PC cost = annuitized cost + 
+          // electricity costs + per drive cost for drives beyond the first
+          cost = (pcCost / (12 * ANNUITIZATION_YEARS)) + 
+              (pcPowerConsumption * (30 * 24) * elecRate / 1000) +
+              ((drives - 1) * perDriveCost);
+          
+           additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
+          
+          return additionalCost;
+      }
+
+      // same as above, but not annuitizing PC of HDD costs
+      function calculateElecCost(pcPowerConsumption, elecRate, drives, regularUptime)
+      {
+          var HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
+          
+          var cost,           // total monthly cost of running the system
+              perDriveCost,   // cost per additional hard drive
+              additionalCost; // cost of changing from normal computer use to 100% uptime
+          
+          // monthly per-drive cost = electricity costs
+          perDriveCost = (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
+          
+          // monthly PC cost = electricity costs + per drive cost for drives beyond the first
+          cost = (pcPowerConsumption * (30 * 24) * elecRate / 1000) + ((drives - 1) * perDriveCost);
+          
+          additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
+          
+          return additionalCost;
+      }
+
+      // calculates revenue from storage space in GB and a rate in dollars per GB 
+      function calculateRevenue(storageSpace, rate)
+      {   
+          return storageSpace * rate;
+      }
+
+      // caclulates your profit in dollars from your cost and revenue
+      function calculateProfit(cost, revenue)
+      {
+          return revenue - cost;
+      }
+
+      // calculates rate to break even. Expressed in dollars/gb/month
+      function calculateBreakEvenRate(cost, space)
+      {
+          return cost / space;
+      }
+
+      // a terrible rounding function
+      function badRound(number, places)
+      {
+          var expansion = Math.pow(10,places);
+          return Math.round(number * expansion) / expansion;
+      }
+
+        $('.adv-calculator-value').bind("keyup change", function(e) {
+            var spaceForRent = $("#txtSpaceForRent").val();
+            var powerUsage = $("#txtPowerUsage").val();
+            var electricityCost = $("#txtElectricityCost").val();
+            var drivesNumber = $("#txtDrives").val();
+            var uptime = $("#txtUptime").val();
+            
+            var elecCost = badRound(calculateElecCost(powerUsage, electricityCost, drivesNumber, uptime), 2);
+            var revenue = badRound(calculateRevenue(spaceForRent, .03), 2);
+            var profit = badRound(calculateProfit(elecCost, revenue), 2);
+            
+            $("#lblProfit").val(profit);
         });
 
        $.getJSON("https://live.driveshare.org/api/downstream/v1/status/list/by/d/uptime", function(json) {
@@ -268,6 +414,7 @@
         });
 
       });
+
     </script>
 
   </body> 
