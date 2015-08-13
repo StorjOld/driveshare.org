@@ -21,7 +21,11 @@ body {
   text-align: center;
 }
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Questrial', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #777;   
 }
 
 a,
@@ -77,6 +81,27 @@ a:hover {
   letter-spacing: -1px;
   margin-top: 10px;
   margin-left: -2px;
+}
+
+.subheading {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-size: 24px;
+  color: #cacaca;
+  line-height: 28px;
+}
+
+code {
+  display: block;
+  background: #eee;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #555;
 }
 
 .intro {
@@ -297,6 +322,17 @@ a:hover {
 
 .cover-signup {
   margin-bottom: 60px;
+}
+
+.cover-intro {
+  margin: 3em auto 4em;
+}
+.cover-intro h1 {
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+.cover-intro p {
+  color: #f9f9f9;
 }
 
 .email {
