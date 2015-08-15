@@ -116,7 +116,10 @@ code {
   width: 80px;
   height: 1px;
   background-color: #DFDFDF;
-  margin: 30px 0 20px;
+  margin: 30px 0;
+}
+.text-center .divider {
+  margin: 30px auto 20px;
 }
 
 .inner {
@@ -190,6 +193,18 @@ code {
 .btn-blue:hover {
   color: #fff;
   background: #107fc9;
+}
+
+.cover-intro .btn-blue,
+.cover-intro .btn-blue:hover,
+.cover-intro .btn-blue:active,
+.cover-intro .btn-blue:focus  {
+  color: #fff;
+  border: 2px solid #fff;
+}
+.cover-intro .btn-blue:hover {
+  color: #107fc9;
+  background: #fff;
 }
 
 .btn-c2a {
