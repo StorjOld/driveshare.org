@@ -2,8 +2,7 @@
  * Import Fonts
  */
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(http://fonts.googleapis.com/css?family=Questrial:400);
+@import url(http://fonts.googleapis.com/css?family=Work+Sans:400,300,700);
 
 
 /*
@@ -12,6 +11,7 @@
 
 html,
 body {
+  font-family: "Work Sans", sans-serif;
   height: 100%;
   background-color: #fff;
   text-rendering: optimizeLegibility;
@@ -21,11 +21,11 @@ body {
   text-align: center;
 }
 p {
-  font-family: 'Questrial', sans-serif;
-  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 38px;
-  color: #777;   
+  line-height: 34px;
+  color: #545454;   
 }
 
 a,
@@ -58,7 +58,7 @@ a:hover {
 }
 
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -1px;
@@ -67,11 +67,11 @@ a:hover {
 }
 
 .subtitle {
-  font-family: 'Questrial', sans-serif;
-  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 17px;
   font-weight: 400;
   line-height: 38px;
-  color: #8B8B8B;   
+  color: #545454;   
 }
 
 .title-sm {
@@ -81,24 +81,28 @@ a:hover {
   letter-spacing: -1px;
   margin-top: 10px;
   margin-left: -2px;
+  font-family: "Work Sans";
+  color: #333;
 }
 
 .subheading {
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  /* letter-spacing: -2px; */
   font-size: 24px;
-  color: #cacaca;
+  color: #38BD43;
+  color: #107fc9;
   line-height: 28px;
 }
 
 code {
   display: block;
-  background: #eee;
+  background: #F9F9F9;
   padding: 1em;
   margin: 1em 0;
+  border: 1px solid #eee;
   border-radius: 3px;
   font-size: 16px;
   color: #555;
@@ -107,7 +111,7 @@ code {
 .intro {
   font-size: 13px;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   color: #B8B8B8;
 }
@@ -127,7 +131,9 @@ code {
 }
 
 .grey {
-  background: #f9f9f9;
+  /* background: #f9f9f9; */
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 ::selection {
@@ -169,7 +175,7 @@ code {
 .btn-blue:hover,
 .btn-blue:active,
 .btn-blue:focus {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -206,6 +212,9 @@ code {
   color: #107fc9;
   background: #fff;
 }
+.cover-intro .intro {
+  color: #f9f9f9;
+}
 
 .btn-c2a {
   margin: 10px 5px 0;
@@ -231,6 +240,7 @@ code {
   margin: 0 20px;
   vertical-align: top;
   font-size: 14px;
+  font-family: "Work Sans";
   border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
 .navbar-link:hover {
@@ -282,6 +292,7 @@ code {
   display: table;
   width: 100%;
   background: #107fc9;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#107fc9+0,0e61b5+100 */  background: #107fc9; /* Old browsers */  background: -moz-radial-gradient(center, ellipse cover,  #107fc9 0%, #0e61b5 100%); /* FF3.6+ */  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#107fc9), color-stop(100%,#0e61b5)); /* Chrome,Safari4+ */  background: -webkit-radial-gradient(center, ellipse cover,  #107fc9 0%,#0e61b5 100%); /* Chrome10+,Safari5.1+ */  background: -o-radial-gradient(center, ellipse cover,  #107fc9 0%,#0e61b5 100%); /* Opera 12+ */  background: -ms-radial-gradient(center, ellipse cover,  #107fc9 0%,#0e61b5 100%); /* IE10+ */  background: radial-gradient(ellipse at center,  #107fc9 0%,#0e61b5 100%); /* W3C */  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#107fc9', endColorstr='#0e61b5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
 }
 .cover-wrapper-inner {
   display: table-cell;
@@ -295,7 +306,7 @@ code {
 }
 .cover-logo {
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 21px;
   font-weight: 700;
   display: inline-block;
@@ -311,16 +322,16 @@ code {
   margin-top: -2px;
 }
 .cover-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 62px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 56px;
   font-weight: 700;
   color: #fff;
-  margin: 30px 0;
-  line-height: 62px;
-  letter-spacing: -3px;
+  margin: 20px 0;
+  line-height: 58px;
+  letter-spacing: -1.5px;
 }
 .cover-description{
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   color: #C8DDF4;
   font-size: 20px;
@@ -350,8 +361,25 @@ code {
   color: #f9f9f9;
 }
 
+.cover-stats {
+  margin: 2em auto;
+}
+.cover-stats .card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5em 0 1em;
+    -webkit-transition: border 200ms;
+    -o-transition: border 200ms;
+    transition: border 200ms;
+}
+.cover-stats .card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+.cover-stats h1 {
+  font-size: 52px;
+}
+
 .email {
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   font-weight: 400;
   padding: 30px 20px;
@@ -396,7 +424,7 @@ code {
 }
 
 .promise {
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 11px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.34);
@@ -416,10 +444,12 @@ code {
 .btn-signup {
   background: #94CA59;
   color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.5px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 1px;
   font-size: 14px;
   padding: 20px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
   width: 100%;
   border: 1px solid #fff;
   margin-left: 0 !important;
@@ -529,7 +559,7 @@ code {
 .calculator .input-group {
   /*width: auto;*/
   margin: 9px auto;
-  font-family: "Questrial", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .calculator .subtitle {
@@ -561,8 +591,8 @@ code {
 
 .calculator .promise {
   color: #D1D1D1;
-  font-family: "Questrial", sans-serif;
-  font-size: 12px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 11px;
   text-align: left;
   margin-bottom: 0;
 }
@@ -576,6 +606,7 @@ code {
 .c2a-section {
   padding: 100px 0 0;
   background: #107fc9;
+  background: #107fc9;     background: #107fc9;     background: -moz-radial-gradient(center, ellipse cover, #107fc9 0%, #0e61b5 100%);     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#107fc9), color-stop(100%,#0e61b5));     background: -webkit-radial-gradient(center, ellipse cover, #107fc9 0%,#0e61b5 100%);     background: -o-radial-gradient(center, ellipse cover, #107fc9 0%,#0e61b5 100%);     background: -ms-radial-gradient(center, ellipse cover, #107fc9 0%,#0e61b5 100%);     background: radial-gradient(ellipse at center, #107fc9 0%,#0e61b5 100%);     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#107fc9', endColorstr='#0e61b5',GradientType=1 );
 }
 
 .c2a-section .divider {
@@ -610,7 +641,7 @@ code {
 }
 
 .footer-link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -862,7 +893,7 @@ code {
     font-size: 12px;
     text-transform: uppercase;
     text-align: center;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Work Sans",sans-serif;
     color: #ADADAD;
   }
   .calculator-promise {
