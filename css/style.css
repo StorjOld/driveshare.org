@@ -361,23 +361,6 @@ code {
   color: #f9f9f9;
 }
 
-.cover-stats {
-  margin: 2em auto;
-}
-.cover-stats .card {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.5em 0 1em;
-    -webkit-transition: border 200ms;
-    -o-transition: border 200ms;
-    transition: border 200ms;
-}
-.cover-stats .card:hover {
-    border: 1px solid rgba(255, 255, 255, 0.45);
-}
-.cover-stats h1 {
-  font-size: 52px;
-}
-
 .email {
   font-family: 'Work Sans', sans-serif;
   font-size: 15px;
@@ -438,8 +421,6 @@ code {
   max-width: 480px;
   margin: 0 auto;
 }
-
-
 
 .btn-signup {
   background: #94CA59;
@@ -658,6 +639,39 @@ code {
   margin: 10px;
 }
 
+
+/*
+ * Statistics
+*/
+
+.cover-stats {
+  margin: 2em auto;
+}
+.cover-stats .card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5em 0 1em;
+    -webkit-transition: border 200ms;
+    -o-transition: border 200ms;
+    transition: border 200ms;
+}
+.cover-stats .card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+.cover-stats h1 {
+  font-size: 52px;
+}
+.table {
+  text-align: left;
+}
+th {
+  text-transform: uppercase;
+  color: #107fc9; 
+  padding-bottom: 1em !important;
+  padding-top: 1em !important;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 12px;
+}
 
 /*
  * Retina
