@@ -190,7 +190,7 @@
           ga('send', 'event', 'SignUp', 'Newsletter', 'Footer', 1);
         });
 
-        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://status.driveshare.org/api/online/json", function(json){
+        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117/api/online/json", function(json){
            var farmersCount = json.farmers.length;
            $('.farmers-count').html(farmersCount);
 
@@ -201,7 +201,7 @@
           }
 
         });
-        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://status.driveshare.org/api/total", function(json){
+        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117/api/total", function(json){
            var storageCount = json.total_TB;
            $('.storage-count').html(storageCount.toFixed(0));
          });
