@@ -670,7 +670,33 @@ th {
   padding-top: 1em !important;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-    padding: 12px;
+    padding: 12px 15px 11px;
+}
+.stats-panel {
+  margin-bottom: 5em;
+}
+.stats-panel .panel-heading {
+  color: #107fc9;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 1em;
+  text-align: center;
+  background: #fff;
+}
+.stats-seen {
+  font-size: 14px;
+  color: #999;
+  text-transform: uppercase;
+}
+.stats-storage {
+  letter-spacing: 1px;
+  color: #222;
+}
+.stats-address {
+  color: #222;
+}
+.stats-order {
+  color: #999;
 }
 
 /*
