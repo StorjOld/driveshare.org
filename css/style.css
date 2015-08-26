@@ -645,17 +645,24 @@ code {
 */
 
 .cover-stats {
-  margin: 2em auto;
+  margin: 2em auto 1em;
 }
-.cover-stats .card {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.5em 0 1em;
-    -webkit-transition: border 200ms;
-    -o-transition: border 200ms;
-    transition: border 200ms;
+.cover-stats .panel {
+  padding: 0;
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  border-radius: 4px;
 }
-.cover-stats .card:hover {
-    border: 1px solid rgba(255, 255, 255, 0.45);
+.cover-stats .panel-heading {
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+.cover-stats .panel .intro {
+  color: #107fc9;
+}
+.cover-stats .panel .title-sm {
+  color: #107fc9;
 }
 .cover-stats h1 {
   font-size: 52px;
