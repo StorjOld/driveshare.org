@@ -215,6 +215,7 @@
            $('.farmers-count').html(farmersCount);
 
           for (var i = 0; i < json.farmers.length; i++) {
+            var orderNumber = i+1;
             var currentFarmer = json.farmers[i];
             var storageSize = (currentFarmer.height*128/1024).toFixed(2);
             var storageUnit = "GB";
@@ -222,7 +223,7 @@
               storageUnit = "TB";
               var storageSize = (storageSize/1024).toFixed(2);
             };
-            var newRow = '<tr><td class="stats-order">'+ i +'</td><td class="stats-address">'+currentFarmer.btc_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
+            var newRow = '<tr><td class="stats-order">'+ orderNumber +'</td><td class="stats-address">'+currentFarmer.btc_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
             $('.stats-table').append(newRow);
           }
 
