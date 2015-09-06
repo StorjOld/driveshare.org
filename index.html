@@ -412,13 +412,14 @@
         //    $('.countries-count').html(countriesCount);
         //  });
 
-        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://status.driveshare.org/api/online/json", function(json){
-           var farmersCount = json.farmers.length;
-           $('.farmers-count').html(farmersCount);
+        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117/api/online/json", function(json){
+          $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117:5000/api/online/json", function(json2){
+            var farmersCount = json.farmers.length+json2.farmers.length;
+            $('.farmers-count').html(farmersCount);
+          });
         });
 
       });
-
     </script>
 
   </body> 
