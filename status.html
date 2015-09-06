@@ -111,10 +111,33 @@
 
     <div class="features">    
       <div class="container">
+
         <div class="row">
           <div class="col-md-12">
             <div class="panel panel-default stats-panel">
-            <div class="panel-heading">Test Group B - Online Users</div>
+            <div class="panel-heading"><p class="intro">Dataserv-Client v2</p>Test Group B - Online Users</div>
+              <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Address</th>
+                      <th>Storage</th>
+                      <th>Last Seen</th>
+                    </tr>
+                  </thead>
+                  <tbody class="stats-table2">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default stats-panel">
+            <div class="panel-heading"><p class="intro">Dataserv-Client v1.3</p>Test Group B - Online Users</div>
               <div class="table-responsive">
                 <table class="table table-striped table-hover">
                   <thead>
@@ -132,6 +155,7 @@
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-md-8 col-md-push-2 text-center">
               <h1 class="title-sm">Test Group B with Rewards</h1>
@@ -211,27 +235,47 @@
         });
 
         $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117/api/online/json", function(json){
-           var farmersCount = json.farmers.length;
-           $('.farmers-count').html(farmersCount);
+          $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117:5000/api/online/json", function(json2){
 
-          for (var i = 0; i < json.farmers.length; i++) {
-            var orderNumber = i+1;
-            var currentFarmer = json.farmers[i];
-            var storageSize = (currentFarmer.height*128/1024).toFixed(2);
-            var storageUnit = "GB";
-            if (storageSize >= 1000) {
-              storageUnit = "TB";
-              var storageSize = (storageSize/1024).toFixed(2);
-            };
-            var newRow = '<tr><td class="stats-order">'+ orderNumber +'</td><td class="stats-address">'+currentFarmer.btc_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
-            $('.stats-table').append(newRow);
-          }
+            var farmersCount = json.farmers.length+json2.farmers.length;
+            $('.farmers-count').html(farmersCount);
 
+            for (var i = 0; i < json.farmers.length; i++) {
+              var orderNumber = i+1;
+              var currentFarmer = json.farmers[i];
+              var storageSize = (currentFarmer.height*128/1024).toFixed(2);
+              var storageUnit = "GB";
+              if (storageSize >= 1000) {
+                storageUnit = "TB";
+                var storageSize = (storageSize/1024).toFixed(2);
+              };
+              var newRow = '<tr><td class="stats-order">'+ orderNumber +'</td><td class="stats-address">'+currentFarmer.btc_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
+              $('.stats-table').append(newRow);
+            }
+
+            for (var i = 0; i < json2.farmers.length; i++) {
+              var orderNumber = i+1;
+              var currentFarmer = json2.farmers[i];
+              var storageSize = (currentFarmer.height*128/1024).toFixed(2);
+              var storageUnit = "GB";
+              if (storageSize >= 1000) {
+                storageUnit = "TB";
+                var storageSize = (storageSize/1024).toFixed(2);
+              };
+              var newRow = '<tr><td class="stats-order">'+ orderNumber +'</td><td class="stats-address">'+currentFarmer.btc_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
+              $('.stats-table2').append(newRow);
+            }
+
+          });
         });
+
         $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117/api/total", function(json){
-           var storageCount = json.total_TB;
-           $('.storage-count').html(storageCount.toFixed(0));
-         });
+          $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117:5000/api/total", function(json2){
+            var storageCount = json.total_TB+json2.total_TB;
+            $('.storage-count').html(storageCount.toFixed(0));
+          });
+        });
+
 
       });
 
