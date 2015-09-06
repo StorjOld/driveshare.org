@@ -57,6 +57,13 @@ a:hover {
   border-bottom: 1px solid;
 }
 
+.link.gold {
+  line-height: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: gold;
+}
+
 .title {
   font-family: 'Work Sans', sans-serif;
   font-size: 40px;
@@ -341,7 +348,7 @@ li {
   color: #C8DDF4;
   font-size: 20px;
   line-height: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .cover-description a {
   color: #fff;
