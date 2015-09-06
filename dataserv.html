@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <div class="features">    
+    <div class="features grey">    
       <div class="container">
         <div class="row text-center">
           <div class="col-md-4">
@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <div class="features grey">    
+    <div class="features">    
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-push-2 text-center">
@@ -113,6 +113,28 @@
             <p>Note that you will need 10,000 SJCX in your address to receive any rewards for this test. Crowdsale addresses can participate with any amount of SJCX but for full rewards they will need a balance of 10,000 SJCX or more. More details on rewards to follow.</p>
             <a href="https://www.youtube.com/watch?v=Zujl0vi313Y" class="btn btn-blue">How to create address</a>
             <a href="https://vimeo.com/125921954" class="btn btn-blue">How to buy SJCX</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features grey">    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-push-2">
+            <span class="intro">Instructions</span>
+            <h1 class="title-sm">Dataserv-Client Setup</h1>
+            <div class="divider"></div>
+            <p class="lead">Until enough old client are moved over to 2.0.3+ newer clients will have to use the url <a>http://status.driveshare.org:5000</a>. We strongly recommend everyone to move to the latest build so that development can move faster.</p>
+            <p>Note if you have previously built using version 1.3.0 keep in mind that:</p>
+            <ul>
+              <li>You can only register 1 payout address per machine until multiple paths are available.</li>
+              <li>The way version 2.0.3 works and is setup is slightly different than the previous v.1.3.0.</li>
+              <li>If you register the same address used with version 1.3.0 as the payout address and the same &lt;PATH TO FOLDER&gt; to store data the build process should be really fast.</li>
+              <li>The payout address must hold a balance of 10,000 SJCX for a Milestone #3 reward, you are free to test the software, for no rewards, if you feel like contributing to the project.</li>
+              <li>The server will register your address for payouts and provide another server-generated address which will come up in the stats page at: <a>http://status.driveshare.org:5000/api/online</a></li>
+              <li>When rebuilding using the build command if your build fails or your height on the status page is stuck on 0, try deleting at least 26 of the old shards (from the last one generated) from your data folder and set the build again, it should work after.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -127,7 +149,7 @@
             <div class="divider"></div>
 
             <h1 class="subheading">1 - Download</h1>
-            <p>Download the Storj dataserv-client 1.3 Windows Executable file <a class="link" href="https://github.com/Storj/dataserv-client/releases/tag/v1.3.0">here</a>.</p>
+            <p>Download the Storj latest dataserv-client Windows Executable file <a class="link" href="https://github.com/Storj/dataserv-client/releases/">here</a>.</p>
 
             <h1 class="subheading">2 - Unpack</h1>
             <p>Unzip the file into a folder of your choice on your local hard drive.</p>
@@ -137,21 +159,26 @@
             <code>cd c:\dataserv-client\</code>
             If you can’t locate the dataserv-client folder this way, open the folder with Windows Explorer then select and copy the text in the explorer bar. Back in CMD type cd, press the space bar once, then move your mouse into the black side of the CMD window, right click, select ‘’paste’’ and press enter.</p>
 
-            <h1 class="subheading">4 - Register</h1>
-            <p>Type:
-            <code>dataserv-client.exe --address &lt;YOUR ADDRESS&gt; register</code>
-            Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt; &gt; are simply placeholders, delete them before pressing enter.</p>
+            <h1 class="subheading">4 - Payout</h1>
+            <p>To set a custom payout address execute the following before registering:
+            <code>dataserv-client.exe --url http://status.driveshare.org:5000 config --set_payout_address &lt;YOUR ADDRESS&gt;</code>
+            Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+            <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+            If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
 
-            <h1 class="subheading">5 - Build</h1>
-            <p>Type:
-            <code>dataserv-client.exe --address &lt;YOUR ADDRESS> --max_size &lt;SPACE IN BYTES&gt; --store_path &lt;PATH TO FOLDER&gt; build</code>
-            Replace &lt;YOUR ADDRESS&gt; with your SJCX address, &lt;SPACE IN BYTES&gt; with the number of bytes you want to store, for this test 500GB would be sufficient, so that is 536870912000 in bytes. To help you convert from GB to Bytes you can use this website <a class="link" href="http://www.convertunits.com/from/GB/to/byte">here</a>. You can store as much as you want over or below 500GB. Replace &lt;PATH TO FOLDER&gt; with the path to a folder you have created to store data for this test. Make sure you choose an amount of storage that you have space for on your hard drive.</p>
+            <h1 class="subheading">5 - Register</h1>
+            <p>Register the generated wallet and payout address with the server:
+            <code>dataserv-client.exe --url http://status.driveshare.org:5000 register</code></p>
+
+            <h1 class="subheading">6 - Build</h1>
+            <p>Create shards:
+            <code>dataserv-client.exe --store_path &lt;PATH_TO_FOLDER&gt; --max_size &lt;MAX_DATA_SIZE&gt; --url http://status.driveshare.org:5000 build</code>
+            Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
             <p>The build process can take up to several hours depending on the size specified. While the process is running your cursor will blink. You can see the build progress by checking the folder properties. The size of the folder and the number of files should increase every few minutes. When the build process is complete you will return to the command prompt.</p>
 
             <h1 class="subheading">6 - Poll</h1>
-            <p>Type:
-            <code>dataserv-client.exe --address &lt;YOUR ADDRESS&gt; poll</code>
-            Replace &lt;YOUR ADDRESS&gt; with your SJCX address.
+            <p>Let the network know you are online:
+            <code>dataserv-client --url=http://status.driveshare.org:5000 poll</code>
             You will then see your command prompt continuously displaying: 
             <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
             Once you are pinging you are done, keep it running.</p>
@@ -170,7 +197,7 @@
             <h1 class="subheading">Install Client</h1>
             <code>
               $ sudo apt-get install python3-pip<br>
-              $ sudo pip3 install -I dataserv-client==1.3.0<br>
+              $ sudo pip3 install dataserv-client<br>
               $ dataserv-client version
             </code>
             <h1 class="subheading">Update Client</h1>
@@ -178,7 +205,7 @@
               $ sudo pip3 install dataserv-client --upgrade<br>
               $ dataserv-client version
             </code>
-            <p>Check out the <a href="https://github.com/Storj/dataserv-client">GitHub</a> page for more information.</p>
+            <p>Check out the <a href="https://github.com/Storj/dataserv-client" class="link">GitHub</a> page for more information.</p>
           </div>
         </div>
       </div>
@@ -195,7 +222,7 @@
             <code>
               $ brew install python3<br>
               $ rehash<br>
-              $ pip3 install -I dataserv-client==1.3.0<br>
+              $ pip3 install dataserv-client<br>
               $ dataserv-client version
             </code>
             <h1 class="subheading">Update Client</h1>
@@ -203,13 +230,26 @@
               $ pip3 install dataserv-client --upgrade<br>
               $ dataserv-client version
             </code>
-            <p>Check out the <a href="https://github.com/Storj/dataserv-client">GitHub</a> page for more information.</p>
+            <p>Check out the <a href="https://github.com/Storj/dataserv-client" class="link">GitHub</a> page for more information.</p>
           </div>
         </div> 
       </div> 
     </div>
 
     <div class="features grey">    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-push-3 text-center">
+            <h1 class="title-sm">Check Your Status</h1>
+            <div class="divider"></div>
+            <p class="subtitle">You can check your status on the network using your generated address at the Test Group B live dashboard.</p>   
+            <a href="status.html" class="btn btn-blue">Status Dashboard</a>    
+          </div>
+        </div> 
+      </div> 
+    </div>
+
+    <div class="features">    
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3 text-center">
@@ -221,8 +261,6 @@
         </div> 
       </div> 
     </div>
-
-
 
     <div class="c2a-section" id="sign-up">
       <div class="container">

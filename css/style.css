@@ -108,6 +108,11 @@ code {
   color: #555;
 }
 
+li {
+  line-height: 1.8em;
+  margin: 1.5em 0;
+}
+
 .intro {
   font-size: 13px;
   text-transform: uppercase;
