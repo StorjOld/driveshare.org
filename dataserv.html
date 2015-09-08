@@ -125,15 +125,13 @@
             <span class="intro">Instructions</span>
             <h1 class="title-sm">Dataserv-Client Setup</h1>
             <div class="divider"></div>
-            <p class="lead">Until enough old client are moved over to 2.0.3+ newer clients will have to use the url <a>http://status.driveshare.org:5000</a>. We strongly recommend everyone to move to the latest build so that development can move faster.</p>
+            <p class="lead">Until enough old client are moved over to 2.0.0+ newer clients will have to use the url <a>http://status.driveshare.org:5000</a>. We strongly recommend everyone to move to the latest build so that development can move faster.</p>
             <p>Note if you have previously built using version 1.3.0 keep in mind that:</p>
             <ul>
               <li>You can only register 1 payout address per machine until multiple paths are available.</li>
-              <li>The way version 2.0.3 works and is setup is slightly different than the previous v.1.3.0.</li>
               <li>If you register the same address used with version 1.3.0 as the payout address and the same &lt;PATH TO FOLDER&gt; to store data the build process should be really fast.</li>
               <li>The payout address must hold a balance of 10,000 SJCX for a Milestone #3 reward, you are free to test the software, for no rewards, if you feel like contributing to the project.</li>
               <li>The server will register your address for payouts and provide another server-generated address which will come up in the stats page at: <a>http://status.driveshare.org:5000/api/online</a></li>
-              <li>When rebuilding using the build command if your build fails or your height on the status page is stuck on 0, try deleting at least 26 of the old shards (from the last one generated) from your data folder and set the build again, it should work after.</li>
             </ul>
           </div>
         </div>
@@ -145,43 +143,54 @@
         <div class="row">
           <div class="col-md-8 col-md-push-2">
             <span class="intro">Instructions</span>
-            <h1 class="title-sm">Windows</h1>
-            <div class="divider"></div>
 
-            <h1 class="subheading">1 - Download</h1>
-            <p>Download the Storj latest dataserv-client Windows Executable file <a class="link" href="https://github.com/Storj/dataserv-client/releases/">here</a>.</p>
+            <!-- OS tabs -->
+            <ul class="nav nav-tabs os-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#windows" aria-controls="windows" role="tab" data-toggle="tab" class="title-sm">Windows</a></li>
+              <li role="presentation"><a href="#linux" aria-controls="linux" role="tab" data-toggle="tab" class="title-sm">Ubuntu Linux</a></li>
+              <li role="presentation"><a href="#osx" aria-controls="osx" role="tab" data-toggle="tab" class="title-sm">Mac OS X</a></li>
+            </ul>
 
-            <h1 class="subheading">2 - Unpack</h1>
-            <p>Unzip the file into a folder of your choice on your local hard drive.</p>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="windows">
+                <h1 class="subheading">Download</h1>
+                <p>Download the latest Storj Dataserv-client Windows release from <a class="link" href="https://github.com/Storj/dataserv-client/releases/">GitHub</a>.</p>
+                <h1 class="subheading">Extract</h1>
+                <p>Extarct the zip file to the folder where you wish to have it installed.</p>
+                <p>The dataserv-client will automaticlly update when new releases are made.</p>
+              </div>
 
-            <h1 class="subheading">3 - Locate</h1>
-            <p>Open a command prompt (CMD.exe) and browse to the folder you just unzipped, for example, by typing: C: (or whatever letter your hard drive is); then you can type:
-            <code>cd c:\dataserv-client\</code>
-            If you can’t locate the dataserv-client folder this way, open the folder with Windows Explorer then select and copy the text in the explorer bar. Back in CMD type cd, press the space bar once, then move your mouse into the black side of the CMD window, right click, select ‘’paste’’ and press enter.</p>
+              <div role="tabpanel" class="tab-pane fade" id="linux">
+                <h1 class="subheading">Install Client</h1>
+                <code>
+                  $ sudo apt-get install python3-pip<br>
+                  $ sudo pip3 install dataserv-client<br>
+                  $ dataserv-client version
+                </code>
+                <h1 class="subheading">Update Client</h1>
+                <code>
+                  $ sudo pip3 install dataserv-client --upgrade<br>
+                  $ dataserv-client version
+                </code>
+              </div>
 
-            <h1 class="subheading">4 - Payout</h1>
-            <p>To set a custom payout address execute the following before registering:
-            <code>dataserv-client.exe --url http://status.driveshare.org:5000 config --set_payout_address &lt;YOUR ADDRESS&gt;</code>
-            Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
-            <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
-            If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+              <div role="tabpanel" class="tab-pane fade" id="osx">
+                <h1 class="subheading">Install Client</h1>
+                <code>
+                  $ brew install python3<br>
+                  $ rehash<br>
+                  $ pip3 install dataserv-client<br>
+                  $ dataserv-client version
+                </code>
+                <h1 class="subheading">Update Client</h1>
+                <code>
+                  $ pip3 install dataserv-client --upgrade<br>
+                  $ dataserv-client version
+                </code>
+              </div>
+            </div>
 
-            <h1 class="subheading">5 - Register</h1>
-            <p>Register the generated wallet and payout address with the server:
-            <code>dataserv-client.exe --url http://status.driveshare.org:5000 register</code></p>
-
-            <h1 class="subheading">6 - Build</h1>
-            <p>Create shards:
-            <code>dataserv-client.exe --store_path &lt;PATH_TO_FOLDER&gt; --max_size &lt;MAX_DATA_SIZE&gt; --url http://status.driveshare.org:5000 build</code>
-            Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
-            <p>The build process can take up to several hours depending on the size specified. While the process is running your cursor will blink. You can see the build progress by checking the folder properties. The size of the folder and the number of files should increase every few minutes. When the build process is complete you will return to the command prompt.</p>
-
-            <h1 class="subheading">6 - Poll</h1>
-            <p>Let the network know you are online:
-            <code>dataserv-client --url=http://status.driveshare.org:5000 poll</code>
-            You will then see your command prompt continuously displaying: 
-            <code>Pinging http://status.driveshare.org:5000 with address &lt;YOUR ADDRESS&gt;</code>
-            Once you are pinging you are done, keep it running.</p>
           </div>
         </div>
       </div>
@@ -192,51 +201,29 @@
         <div class="row">
           <div class="col-md-8 col-md-push-2">
             <span class="intro">Instructions</span>
-            <h1 class="title-sm">Ubuntu Linux</h1>
+            <h1 class="title-sm">Farmer quickstart guide</h1>
             <div class="divider"></div>
-            <h1 class="subheading">Install Client</h1>
-            <code>
-              $ sudo apt-get install python3-pip<br>
-              $ sudo pip3 install dataserv-client<br>
-              $ dataserv-client version
-            </code>
-            <h1 class="subheading">Update Client</h1>
-            <code>
-              $ sudo pip3 install dataserv-client --upgrade<br>
-              $ dataserv-client version
-            </code>
-            <p>Check out the <a href="https://github.com/Storj/dataserv-client" class="link">GitHub</a> page for more information.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="features">    
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-push-2">
-            <span class="intro">Instructions</span>
-            <h1 class="title-sm">Mac OS X</h1>
-            <div class="divider"></div>
-            <h1 class="subheading">Install Client</h1>
-            <code>
-              $ brew install python3<br>
-              $ rehash<br>
-              $ pip3 install dataserv-client<br>
-              $ dataserv-client version
-            </code>
-            <h1 class="subheading">Update Client</h1>
-            <code>
-              $ pip3 install dataserv-client --upgrade<br>
-              $ dataserv-client version
-            </code>
-            <p>Check out the <a href="https://github.com/Storj/dataserv-client" class="link">GitHub</a> page for more information.</p>
+            <h1 class="subheading">Configure the client</h1>
+            <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
+            <code>dataserv-client.exe --url=http://status.driveshare.org:5000 config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+            Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+            <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+            If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+            <h1 class="subheading">Start farming</h1>
+            <p>Optionally specifiy the path to store data path and available space.
+            <code>dataserv-client --url=http://status.driveshare.org:5000 --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+            </p>
+            Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
+            You will then see your command prompt continuously displaying: 
+            <code>Pinging http://status.driveshare.org:5000 with address &lt;YOUR ADDRESS&gt;</code>
+            Once you are pinging you are done, keep it running.</p>
           </div>
         </div> 
       </div> 
     </div>
 
-    <div class="features grey">    
+
+    <div class="features">    
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3 text-center">
@@ -249,7 +236,7 @@
       </div> 
     </div>
 
-    <div class="features">    
+    <div class="features grey">    
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3 text-center">

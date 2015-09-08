@@ -653,6 +653,39 @@ li {
 
 
 /*
+ * Instructions
+*/
+
+.os-tabs {
+    margin: 0 0 2em;
+    border: 0;
+}
+.os-tabs .title-sm {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -1px;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-family: "Work Sans";
+    color: #333;
+    border-bottom: 4px solid #eee;
+    text-transform: none;
+    background: none !important;
+}
+.os-tabs>li.active>a, .os-tabs>li.active>a:hover, .os-tabs>li.active>a:focus {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #107fc9;
+    border-bottom-color: transparent;
+    cursor: default;
+    color: #107fc9;
+    border-bottom: 4px solid #107fc9 !important;
+}
+
+
+
+/*
  * Statistics
 */
 
