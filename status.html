@@ -234,8 +234,8 @@
           ga('send', 'event', 'SignUp', 'Newsletter', 'Footer', 1);
         });
 
-        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117/api/online/json", function(json){
-          $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117:5000/api/online/json", function(json2){
+        $.getJSON("http://104.236.104.117/api/online/json", function(json){
+          $.getJSON("http://104.236.104.117:5000/api/online/json", function(json2){
 
             var farmersCount = json.farmers.length+json2.farmers.length;
             $('.farmers-count').html(farmersCount);
@@ -269,8 +269,8 @@
           });
         });
 
-        $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117/api/total", function(json){
-          $.getJSON("https://jsonp.afeld.me/?callback=?&url=http://104.236.104.117:5000/api/total", function(json2){
+        $.getJSON("http://104.236.104.117/api/total", function(json){
+          $.getJSON("http://104.236.104.117:5000/api/total", function(json2){
             var storageCount = json.total_TB+json2.total_TB;
             $('.storage-count').html(storageCount.toFixed(0));
           });
