@@ -125,13 +125,13 @@
             <span class="intro">Instructions</span>
             <h1 class="title-sm">Dataserv-Client Setup</h1>
             <div class="divider"></div>
-            <p class="lead">Until enough old client are moved over to 2.0.0+ newer clients will have to use the url <a>http://status.driveshare.org:5000</a>. We strongly recommend everyone to move to the latest build so that development can move faster.</p>
+            <p class="lead">Until enough old client are moved over to 2.0.0+ newer clients will have to use the url <a>http://104.236.1.59</a>. We strongly recommend everyone to move to the latest build so that development can move faster.</p>
             <p>Note if you have previously built using version 1.3.0 keep in mind that:</p>
             <ul>
               <li>You can only register 1 payout address per machine until multiple paths are available.</li>
               <li>If you register the same address used with version 1.3.0 as the payout address and the same &lt;PATH TO FOLDER&gt; to store data the build process should be really fast.</li>
               <li>The payout address must hold a balance of 10,000 SJCX for a Milestone #3 reward, you are free to test the software, for no rewards, if you feel like contributing to the project.</li>
-              <li>The server will register your address for payouts and provide another server-generated address which will come up in the stats page at: <a>http://status.driveshare.org:5000/api/online</a></li>
+              <li>The server will register your address for payouts and provide another server-generated address which will come up in the stats page at: <a>http://104.236.1.59/api/online</a></li>
             </ul>
           </div>
         </div>
@@ -205,17 +205,17 @@
             <div class="divider"></div>
             <h1 class="subheading">Configure the client</h1>
             <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
-            <code>dataserv-client.exe --url=http://status.driveshare.org:5000 config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+            <code>dataserv-client.exe --url=http://104.236.1.59 config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
             Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
             <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
             If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
             <h1 class="subheading">Start farming</h1>
             <p>Optionally specifiy the path to store data path and available space.
-            <code>dataserv-client --url=http://status.driveshare.org:5000 --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+            <code>dataserv-client --url=http://104.236.1.59 --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
             </p>
             Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
             You will then see your command prompt continuously displaying: 
-            <code>Pinging http://status.driveshare.org:5000 with address &lt;YOUR ADDRESS&gt;</code>
+            <code>Pinging http://104.236.1.59 with address &lt;YOUR ADDRESS&gt;</code>
             Once you are pinging you are done, keep it running.</p>
           </div>
         </div> 
