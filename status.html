@@ -133,7 +133,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="row">
           <div class="col-md-12">
             <div class="panel panel-default stats-panel">
@@ -249,7 +249,7 @@
                 storageUnit = "TB";
                 var storageSize = (storageSize/1024).toFixed(2);
               };
-              var newRow = '<tr><td class="stats-order">'+ orderNumber +'</td><td class="stats-address">'+currentFarmer.btc_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
+              var newRow = '<tr><td class="stats-order">'+ orderNumber +'</td><td class="stats-address">'+currentFarmer.payout_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
               $('.stats-table').append(newRow);
             }
 
