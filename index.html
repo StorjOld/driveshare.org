@@ -412,11 +412,9 @@
         //    $('.countries-count').html(countriesCount);
         //  });
 
-        $.getJSON("http://104.236.104.117/api/online/json", function(json){
-          $.getJSON("http://104.236.104.117:5000/api/online/json", function(json2){
-            var farmersCount = json.farmers.length+json2.farmers.length;
-            $('.farmers-count').html(farmersCount);
-          });
+        $.getJSON("http://switch.driveshare.org/api/online/json", function(json){
+          var farmersCount = json.farmers.length;
+          $('.farmers-count').html(farmersCount);
         });
 
       });
