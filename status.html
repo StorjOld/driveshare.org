@@ -208,15 +208,19 @@
 
     <script>
       $(function() {
+        
         $('#signup-footer').on('click', function() {
           ga('send', 'event', 'SignUp', 'Newsletter', 'Footer', 1);
         });
 
-        $.getJSON("http://switch.driveshare.org/api/online/json", function(json){
-
-          var farmersCount = json.farmers.length;
+        $.getJSON("http://status.driveshare.org/api/total", function(json){
+          var storageCount = json.total_TB;
+          $('.storage-count').html(storageCount.toFixed(0));
+          var farmersCount = json.total_farmers;
           $('.farmers-count').html(farmersCount);
+        });
 
+        $.getJSON("http://switch.driveshare.org/api/online/json", function(json){
           for (var i = 0; i < json.farmers.length; i++) {
             var orderNumber = i+1;
             var currentFarmer = json.farmers[i];
@@ -229,17 +233,9 @@
             var newRow = '<tr><td class="stats-order">'+ orderNumber +'</td><td class="stats-address">'+currentFarmer.payout_addr+'</td><td class="stats-storage">'+storageSize+' '+storageUnit+'</td><td class="stats-seen">'+currentFarmer.last_seen+' seconds</td></tr>'
             $('.stats-table').append(newRow);
           }
-
         });
-
-        $.getJSON("http://switch.driveshare.org/api/total", function(json){
-          var storageCount = json.total_TB;
-          $('.storage-count').html(storageCount.toFixed(0));
-        });
-
 
       });
-
     </script>
 
   </body> 
