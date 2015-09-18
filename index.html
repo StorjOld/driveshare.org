@@ -412,8 +412,8 @@
         //    $('.countries-count').html(countriesCount);
         //  });
 
-        $.getJSON("http://switch.driveshare.org/api/online/json", function(json){
-          var farmersCount = json.farmers.length;
+        $.getJSON("http://status.driveshare.org/api/total", function(json){
+          var farmersCount = json.total_farmers;
           $('.farmers-count').html(farmersCount);
         });
 
