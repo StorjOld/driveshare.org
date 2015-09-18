@@ -155,6 +155,20 @@
                 <h1 class="subheading">Extract</h1>
                 <p>Extract the zip file to the folder where you wish to have it installed.</p>
                 <p>The dataserv-client will automatically update when new releases are made.</p>
+                <h1 class="subheading">Configure the client</h1>
+                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
+                <code>dataserv-client.exe config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+                <h1 class="subheading">Start farming</h1>
+                <p>Optionally specifiy the path to store data path and available space.
+                <code>dataserv-client.exe --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+                </p>
+                Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
+                You will then see your command prompt continuously displaying: 
+                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
+                Once you are pinging you are done, keep it running.</p>
               </div>
 
               <div role="tabpanel" class="tab-pane fade" id="linux">
@@ -169,6 +183,20 @@
                   $ sudo pip3 install dataserv-client --upgrade<br>
                   $ dataserv-client version
                 </code>
+                <h1 class="subheading">Configure the client</h1>
+                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
+                <code>dataserv-client config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+                <h1 class="subheading">Start farming</h1>
+                <p>Optionally specifiy the path to store data path and available space.
+                <code>dataserv-client --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+                </p>
+                Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
+                You will then see your command prompt continuously displaying: 
+                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
+                Once you are pinging you are done, keep it running.</p>
               </div>
 
               <div role="tabpanel" class="tab-pane fade" id="osx">
@@ -184,6 +212,20 @@
                   $ pip3 install dataserv-client --upgrade<br>
                   $ dataserv-client version
                 </code>
+                <h1 class="subheading">Configure the client</h1>
+                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
+                <code>dataserv-client config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+                <h1 class="subheading">Start farming</h1>
+                <p>Optionally specifiy the path to store data path and available space.
+                <code>dataserv-client --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+                </p>
+                Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
+                You will then see your command prompt continuously displaying: 
+                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
+                Once you are pinging you are done, keep it running.</p>
               </div>
             </div>
 
@@ -193,33 +235,6 @@
     </div>
 
     <div class="features grey">    
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-push-2">
-            <span class="intro">Instructions</span>
-            <h1 class="title-sm">Farmer quickstart guide</h1>
-            <div class="divider"></div>
-            <h1 class="subheading">Configure the client</h1>
-            <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
-            <code>dataserv-client.exe config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
-            Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
-            <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
-            If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
-            <h1 class="subheading">Start farming</h1>
-            <p>Optionally specifiy the path to store data path and available space.
-            <code>dataserv-client --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
-            </p>
-            Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
-            You will then see your command prompt continuously displaying: 
-            <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
-            Once you are pinging you are done, keep it running.</p>
-          </div>
-        </div> 
-      </div> 
-    </div>
-
-
-    <div class="features">    
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3 text-center">
@@ -232,7 +247,7 @@
       </div> 
     </div>
 
-    <div class="features grey">    
+    <div class="features">    
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3 text-center">
