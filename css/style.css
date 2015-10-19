@@ -481,7 +481,8 @@ li {
   font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   font-weight: 400;
-  padding: 30px 20px;
+  padding: 0 20px;
+  height: 62px;
   margin-top: 0;
   color: #555 !important;
   border: 1px solid #FFF;
@@ -1018,6 +1019,11 @@ th {
     float: left;
     width: 100%;
     margin-top: 10px;
+  }
+  .email, .btn-signup {
+    -webkit-border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    border-radius: 50px !important;
   }
   .promise {
     text-align: center;
