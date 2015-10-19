@@ -295,7 +295,7 @@ li {
 }
 .btn-blue:hover {
   color: #fff;
-  background: #107fc9;
+  background: #4092ff;
 }
 
 .btn-green,
@@ -327,7 +327,7 @@ li {
 
 .btn-green:hover {
   color: #fff;
-  background: #107fc9;
+  background: #91D127;
 }
 
 .btn-c2a {
@@ -564,7 +564,7 @@ li {
 
 .btn-signup:hover {
   color: #FFFFFF;
-  background: #a0d468;
+  background: #91D127;
 }
 
 .btn-signup:focus {
@@ -765,7 +765,7 @@ li {
     border: 0;
 }
 .os-tabs .title-sm {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: -1px;
