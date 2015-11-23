@@ -332,6 +332,10 @@ li {
   margin: 10px 5px 0;
 }
 
+.btn-download, .btn-download:hover {
+  min-width: 160px;
+}
+
 
 /*
  * Navigation
@@ -473,6 +477,9 @@ li {
 }
 .cover-intro p {
   color: #f9f9f9;
+}
+.cover-intro a {
+  color: #fff !important;
 }
 
 .email {
@@ -785,6 +792,11 @@ li {
 }
 .os-tabs>li>a:hover {
     background: #f2f2f2 !important;
+}
+
+.driveshare-gui {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 
