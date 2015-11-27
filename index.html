@@ -58,23 +58,14 @@
             </div>
           </nav>
 
-          <div class="row">
+          <div class="row text-left">
             <div class="col-md-6">
               <h1 class="cover-heading">
                 Earn money by sharing your<br class="visible-xs visible-sm"> extra hard drive space
               </h1>
-              <p class="cover-description">There are <a href="status.html" class="link"><span class="farmers-count"></span> live beta testers</a> in <a href="http://storj.io/earlyaccess.html" class="link">Test Group B</a>.<br><a href="dataserv.html" class="link gold">Start testing and earn rewards now!</a></p>
-              <form class="form-inline validate cover-signup" role="form" action="http://storj.us8.list-manage.com/subscribe/post?u=edba9fc4ce8b9095a31859cba&amp;id=0b1509efa2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                <div class="input-group">
-                  <input type="email" name="EMAIL" id="mce-EMAIL" class="email form-control" placeholder="Enter your email here" spellcheck="false">
-                  <span class="input-group-btn">
-                    <input type="submit" value="Subscribe" name="subscribe" id="signup-header" class="btn btn-signup">
-                  </span>
-                </div>
-                <span class="promise">*We will never share, rent, or sell your email address to anyone, ever.</span>
-                <input class="hide" type="checkbox" value="1" name="group[11401][2]" id="mce-group[11401]-11401-0" checked>
-                <div style="position: absolute; left: -10000px;"><input type="text" name="b_edba9fc4ce8b9095a31859cba_0b1509efa2" value=""></div>
-              </form>
+              <p class="cover-description">There are <a href="status.html" class="link"><span class="farmers-count"></span></a> live beta testers in <a href="http://storj.io/earlyaccess.html" class="link">Test Group B</a>,<br>sharing <a href="status.html" class="link"><span class="storage-count"></span> TB</a> storage &amp; <a href="dataserv.html" class="link">earning rewards</a>.</p>
+              <a href="download.html" class="btn btn-green text-left">Download Now</a>
+              <a href="dataserv.html" class="btn btn-transparent btn-download text-left">I'm An Expert</a>
             </div>
             <div class="col-md-6">
             <div class="preview img-responsive"></div>
@@ -414,7 +405,9 @@
 
         $.getJSON("http://status.driveshare.org/api/total", function(json){
           var farmersCount = json.total_farmers;
+          var storageCount = json.total_TB;
           $('.farmers-count').html(farmersCount);
+          $('.storage-count').html(storageCount);
         });
 
       });

@@ -328,12 +328,48 @@ li {
   background: #91D127;
 }
 
+.btn-transparent,
+.btn-transparent:hover,
+.btn-transparent:active,
+.btn-transparent:focus {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 20px;
+  color: #fff;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  min-width: 250px;
+  margin: 20px;
+  outline: none;
+  position: relative;
+  background-color: transparent;
+  -webkit-transition: all 270ms;
+  -moz-transition: all 270ms;
+  -ms-transition: all 270ms;
+  -o-transition: all 270ms;
+  transition: all 270ms;
+}
+
+.btn-transparent:hover {
+  color: #333;
+  background: #fff;
+}
+
 .btn-c2a {
   margin: 10px 5px 0;
 }
 
 .btn-download, .btn-download:hover {
   min-width: 160px;
+}
+
+.btn.text-left {
+  margin-left: 0;
 }
 
 
@@ -453,8 +489,8 @@ li {
   font-weight: 300;
   color: #C8DDF4;
   font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 20px;
+  line-height: 38px;
+  margin-bottom: 10px;
 }
 .cover-description a {
   color: #fff;
@@ -580,7 +616,7 @@ li {
 }
 
 .preview {
-  margin: 45px auto 110px;
+  margin: 45px auto 100px;
   background: url('../img/driveshare.png');
   background-size: contain;
   background-repeat: no-repeat;
