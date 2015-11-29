@@ -44,7 +44,6 @@
     <div class="cover-wrapper">
       <div class="cover-wrapper-inner">
         <div class="cover-container container">
-
           <nav class="navbar row" role="navigation">
             <a href="index.html" class="cover-logo col-xs-12 col-sm-4">
               <img src="img/logo.png" alt="DriveShare" class="cover-logo-icon">
@@ -67,7 +66,6 @@
               <a href="download.html" class="btn btn-green">Download GUI</a>     
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -76,27 +74,145 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-md-4">
-            <h1 class="subheading">Milestone #1</h1>
+            <h3 class="subheading">Milestone #1</h3>
             <h1 class="title-sm">100GB</h1>
             <div class="divider"></div>
-            <h1 class="subheading green">Rewards</h1>
+            <h3 class="subheading green">Rewards</h3>
             <p><a href="https://docs.google.com/spreadsheets/d/1dZYzMrW0i4qtonDIjk3pfwkKv6rHCOuUc7rUurIRPqU/edit#gid=0" class="link" target="_blank"><strong>45,528 SJCX</strong> Paid Out</a></p>
           </div>
           <div class="col-md-4">
           <div class="well">
-            <h1 class="subheading">Milestone #2</h1>
+            <h3 class="subheading">Milestone #2</h3>
             <h1 class="title-sm">100TB</h1>
             <div class="divider"></div>
-            <h1 class="subheading green">Rewards</h1>
+            <h3 class="subheading green">Rewards</h3>
             <p><a href="https://docs.google.com/spreadsheets/d/1dZYzMrW0i4qtonDIjk3pfwkKv6rHCOuUc7rUurIRPqU/edit#gid=0" class="link" target="_blank"><strong>102,000 SJCX</strong> Paid Out</a></p>
             </div>
           </div>
           <div class="col-md-4">
-            <h1 class="subheading">Milestone #3</h1>
+            <h3 class="subheading">Milestone #3</h3>
             <h1 class="title-sm">1PB</h1>
             <div class="divider"></div>
-            <h1 class="subheading green">Rewards</h1>
+            <h3 class="subheading green">Rewards</h3>
             <p><a href="https://docs.google.com/spreadsheets/d/1dZYzMrW0i4qtonDIjk3pfwkKv6rHCOuUc7rUurIRPqU/edit#gid=0" class="link" target="_blank"><strong>1,000,000 SJCX</strong> Going Out</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-push-2">
+
+            <!-- OS tabs -->
+            <ul class="nav nav-tabs os-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#windows" aria-controls="windows" role="tab" data-toggle="tab" class="title-sm">Windows</a></li>
+              <li role="presentation"><a href="#osx" aria-controls="osx" role="tab" data-toggle="tab" class="title-sm">Mac OS X</a></li>
+              <li role="presentation"><a href="#linux" aria-controls="linux" role="tab" data-toggle="tab" class="title-sm">Ubuntu Linux</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="windows">
+                <h3>DriveShare for Windows</h3>
+                <p>Download the latest DriveShare GUI <a class="link" href="https://github.com/Storj/dataserv-client/releases/">here</a> and follow the instructions on the page. If you don't want to use the graphical interface, please follow the instructions below.</p>
+                <div class="divider"></div>
+                <h3>1. Download Client</h3>
+                <p>Download the latest Storj Dataserv-client Windows release from <a class="link" href="https://github.com/Storj/dataserv-client/releases/">GitHub</a>.</p>
+                <div class="divider"></div>
+                <h3>2. Extract Client</h3>
+                <p>Extract the zip file to the folder where you wish to have it installed.</p>
+                <p>The dataserv-client will automatically update when new releases are made.</p>
+                <div class="divider"></div>
+                <h3>3. Configure the client</h3>
+                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
+                <code>dataserv-client.exe config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+                <div class="divider"></div>
+                <h3>4. Start farming</h3>
+                <p>Optionally specifiy the path to store data and available space.
+                <code>dataserv-client.exe --store_path=&lt;PATH&gt; --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+                </p>
+                <p>
+                Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
+                <p>You will then see your command prompt continuously displaying:</p>
+                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
+                <p>Once you are pinging you are done, keep it running.</p>
+              </div>
+
+              <div role="tabpanel" class="tab-pane fade" id="osx">
+                <h3>DriveShare for Mac OS X</h3>
+                <p>Download the latest DriveShare GUI <a class="link" href="https://github.com/Storj/dataserv-client/releases/">here</a> and follow the instructions on the page. If you don't want to use the graphical interface, please follow the instructions below.</p>
+                <div class="divider"></div>
+                <h3>1. Install Client</h3>
+                <code>
+                  $ brew install python3<br>
+                  $ rehash<br>
+                  $ pip3 install dataserv-client<br>
+                  $ dataserv-client version
+                </code>
+                <div class="divider"></div>
+                <h3>2. Configure the client</h3>
+                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
+                <code>dataserv-client config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+                <div class="divider"></div>
+                <h3>3. Start farming</h3>
+                <p>Optionally specifiy the path to store data and available space.
+                <code>dataserv-client --store_path=&lt;PATH&gt; --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+                </p>
+                <p>Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
+                <p>You will then see your command prompt continuously displaying: </p>
+                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
+                <p>Once you are pinging you are done, keep it running.</p>
+                <div class="divider"></div>
+                <h3>Updating Client</h3>
+                <code>
+                  $ pip3 install dataserv-client --upgrade<br>
+                  $ dataserv-client version
+                </code>
+              </div>
+
+              <div role="tabpanel" class="tab-pane fade" id="linux">
+                <h3>DriveShare for Linux</h3>
+                <p>Download the latest DriveShare GUI <a class="link" href="https://github.com/Storj/dataserv-client/releases/">here</a> and follow the instructions on the page. If you don't want to use the graphical interface, please follow the instructions below.</p>
+                <div class="divider"></div>
+                <h3>1. Install Client</h3>
+                <code>
+                  $ sudo apt-get install python3-pip<br>
+                  $ sudo pip3 install dataserv-client<br>
+                  $ dataserv-client version
+                </code>
+                <div class="divider"></div>
+                <h3>2. Configure the client</h3>
+                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
+                <code>dataserv-client config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
+                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
+                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
+                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
+                <div class="divider"></div>
+                <h3>3. Start farming</h3>
+                <p>Optionally specifiy the path to store data and available space.
+                <code>dataserv-client --store_path=&lt;PATH&gt; --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
+                </p>
+                <p>Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
+                <p>You will then see your command prompt continuously displaying: </p>
+                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
+                <p>Once you are pinging you are done, keep it running.</p>
+                <div class="divider"></div>
+                <h3>Updating Client</h3>
+                <code>
+                  $ sudo pip3 install dataserv-client --upgrade<br>
+                  $ dataserv-client version
+                </code>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -116,120 +232,31 @@
       </div>
     </div>
 
-    <div class="features grey">    
+    <div class="features grey" id="exchanges">    
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-push-2">
-            <span class="intro">Instructions</span>
-            <h1 class="title-sm">Dataserv-Client Setup</h1>
+          <div class="col-md-8 col-md-push-2 text-center">
+            <h1 class="title-sm">Get Your SJCX</h1>
             <div class="divider"></div>
-            <p>Note if you have previously built using version 1.3.0 keep in mind that:</p>
-            <ul>
-              <li>You can only register 1 payout address per machine until multiple paths are available.</li>
-              <li>If you register the same address used with version 1.3.0 as the payout address and the same &lt;PATH TO FOLDER&gt; to store data the build process should be really fast.</li>
-              <li>The payout address must hold a balance of 10,000 SJCX for a Milestone #3 reward, you are free to test the software, for no rewards, if you feel like contributing to the project.</li>
-              <li>The server will register your address for payouts and provide another server-generated address which will come up in the <a href="http://driveshare.org/status.html" class="link">stats page</a>.</li>
-            </ul>
+            <p>You can create a wallet and address for SJCX at <a href="https://counterwallet.io/" target="_blank" class="link">Counterwallet</a>. Visit these exchanges to buy your StorjcoinX. You can read more about SJCX in the <a href="http://storj.io/faq.html#faq-t-3" class="link">FAQ</a>.</p>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="features">    
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-push-2">
-            <span class="intro">Instructions</span>
-
-            <!-- OS tabs -->
-            <ul class="nav nav-tabs os-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#windows" aria-controls="windows" role="tab" data-toggle="tab" class="title-sm">Windows</a></li>
-              <li role="presentation"><a href="#linux" aria-controls="linux" role="tab" data-toggle="tab" class="title-sm">Ubuntu Linux</a></li>
-              <li role="presentation"><a href="#osx" aria-controls="osx" role="tab" data-toggle="tab" class="title-sm">Mac OS X</a></li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade in active" id="windows">
-                <h1 class="subheading">Download</h1>
-                <p>Download the latest Storj Dataserv-client Windows release from <a class="link" href="https://github.com/Storj/dataserv-client/releases/">GitHub</a>.</p>
-                <h1 class="subheading">Extract</h1>
-                <p>Extract the zip file to the folder where you wish to have it installed.</p>
-                <p>The dataserv-client will automatically update when new releases are made.</p>
-                <h1 class="subheading">Configure the client</h1>
-                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
-                <code>dataserv-client.exe config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
-                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
-                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
-                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
-                <h1 class="subheading">Start farming</h1>
-                <p>Optionally specifiy the path to store data and available space.
-                <code>dataserv-client.exe --store_path=&lt;PATH&gt; --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
-                </p>
-                Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
-                You will then see your command prompt continuously displaying: 
-                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
-                Once you are pinging you are done, keep it running.</p>
-              </div>
-
-              <div role="tabpanel" class="tab-pane fade" id="linux">
-                <h1 class="subheading">Install Client</h1>
-                <code>
-                  $ sudo apt-get install python3-pip<br>
-                  $ sudo pip3 install dataserv-client<br>
-                  $ dataserv-client version
-                </code>
-                <h1 class="subheading">Update Client</h1>
-                <code>
-                  $ sudo pip3 install dataserv-client --upgrade<br>
-                  $ dataserv-client version
-                </code>
-                <h1 class="subheading">Configure the client</h1>
-                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
-                <code>dataserv-client config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
-                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
-                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
-                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
-                <h1 class="subheading">Start farming</h1>
-                <p>Optionally specifiy the path to store data and available space.
-                <code>dataserv-client --store_path=&lt;PATH&gt; --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
-                </p>
-                Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
-                You will then see your command prompt continuously displaying: 
-                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
-                Once you are pinging you are done, keep it running.</p>
-              </div>
-
-              <div role="tabpanel" class="tab-pane fade" id="osx">
-                <h1 class="subheading">Install Client</h1>
-                <code>
-                  $ brew install python3<br>
-                  $ rehash<br>
-                  $ pip3 install dataserv-client<br>
-                  $ dataserv-client version
-                </code>
-                <h1 class="subheading">Update Client</h1>
-                <code>
-                  $ pip3 install dataserv-client --upgrade<br>
-                  $ dataserv-client version
-                </code>
-                <h1 class="subheading">Configure the client</h1>
-                <p>Optionally set a cold storage payout address. You can set a counterparty wallet address here. All configuration must be done before starting the node.
-                <code>dataserv-client config --set_payout_address=&lt;YOUR ADDRESS&gt;</code>
-                Replace &lt;YOUR ADDRESS&gt; with your SJCX address. The &lt;&gt; are simply placeholders, delete them before pressing enter.</p>
-                <p>This will let you use a cold storage wallet or a counterparty wallet as the payout address instead of the automatically generated wallet.
-                If you have no counterparty wallet and wish to use the generated wallet, please make a secure backup of the generated config.</p>
-                <h1 class="subheading">Start farming</h1>
-                <p>Optionally specifiy the path to store data and available space.
-                <code>dataserv-client --store_path=&lt;PATH&gt; --max_size=&lt;YOUR SIZE HERE&gt; farm</code>
-                </p>
-                Make sure you choose an amount of storage that you have space for on your hard drive, i.e. 1TB for 1 terabyte, 5GB for 5 gigabytes, etc.</p>
-                You will then see your command prompt continuously displaying: 
-                <code>Pinging http://status.driveshare.org with address &lt;YOUR ADDRESS&gt;</code>
-                Once you are pinging you are done, keep it running.</p>
-              </div>
-            </div>
-
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-3 col-sm-push-3">
+            <a href="https://poloniex.com/exchange/btc_sjcx"><img src="img/exchanges/poloniex.jpg" class="exchange-logo grayscale" alt=""></a>
+            <p class="text-center"><a href="https://poloniex.com/exchange/btc_sjcx" class="link">Poloniex</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-sm-pull-3">
+            <a href="https://shapeshift.io/"><img src="img/exchanges/shapeshift.jpg" class="exchange-logo grayscale" alt=""></a>
+            <p class="text-center"><a href="https://shapeshift.io/" class="link">ShapeShift</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <a href="https://counterwallet.co/"><img src="img/exchanges/counterparty.jpg" class="exchange-logo grayscale" alt=""></a>
+            <p class="text-center"><a href="https://counterwallet.co/" class="link">Counterparty</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <a href="https://bittrex.com/Market/?MarketName=BTC-SJCX"><img src="img/exchanges/bittrex.jpg" class="exchange-logo grayscale" alt=""></a>
+            <p class="text-center"><a href="https://bittrex.com/Market/?MarketName=BTC-SJCX" class="link">BitTrex</a></p>
           </div>
         </div>
       </div>
@@ -267,7 +294,6 @@
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <h1 class="title">Would you like to know more?</h1>
-              <div class="divider"></div>
               <p class="subtitle">We are adding the finishing touches to our beta software. Sign up for the newsletter to get updates on our progress, info on the project, and early access to the application when it is production ready.</p>
             </div>
           </div> 
