@@ -481,7 +481,6 @@ li {
 }
 .cover-description a {
   color: #fff;
-  border-b
 }
 .cover-description span {
   color: #fff;
@@ -790,8 +789,15 @@ li {
   padding: 20px;
   margin: 30px 20px 20px;
   background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(16, 127, 201, 0.1);
+  border-radius: 10px;
+  border: 1px solid #eee;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.exchange-logo:hover {
+  border-color: #107fc9;
 }
 
 
