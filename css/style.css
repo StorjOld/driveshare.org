@@ -471,6 +471,7 @@ li {
   margin: 20px 0;
   line-height: 58px;
   letter-spacing: -1.5px;
+  text-transform: capitalize;
 }
 .cover-description{
   font-family: 'Work Sans', sans-serif;
