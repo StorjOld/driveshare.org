@@ -349,18 +349,6 @@ li {
   outline: 0 !important;
 }
 
-.btn-download {
-  min-width: 180px;
-}
-
-.btn-c2a {
-  margin: 10px 5px 0;
-}
-
-.btn.text-left {
-  margin-left: 0;
-}
-
 
 /*
  * Navigation
@@ -919,12 +907,16 @@ th {
     height: 380px;
     width: 380px;
   }
+  .btn-home {
+    padding: 20px 30px;
+  }
 }
 
 @media all and (min-width: 991px) {
   .cover-description,
   .cover-heading,
-  .cover-container form {
+  .cover-container form,
+  .cover-buttons {
     text-align: left;
   }
   .cover-heading {
@@ -932,6 +924,9 @@ th {
   }
   .navbar-menu {
     padding-right: 45px;
+  }
+  .btn-home {
+    margin-left: 0 !important;
   }
 }
 
@@ -1038,6 +1033,9 @@ th {
   .section {
     padding: 20px 20px 40px;
   }
+  .cover {
+    padding: 0;
+  }
   .cover-container {
     margin: 40px auto 0;
   }
@@ -1046,6 +1044,8 @@ th {
   }
   .cover-logo {
     width: 100%;
+    margin: 5px 0;
+    padding: 0;
   }
   .cover-heading {
     font-size: 42px;
@@ -1053,9 +1053,6 @@ th {
     margin-top: 5px;
     line-height: 46px;
     letter-spacing: -1px;
-  }
-  .cover-description {
-    font-size: 15px;
   }
   .email {
     font-size: 12px;
@@ -1076,17 +1073,8 @@ th {
     font-size: 32px;
     line-height: 40px;
   }
-  .cover {
-    padding: 0;
-  }
-  .cover-heading {
-    font-size: 26px;
-    line-height: 36px;
-    margin-bottom: 30px;
-  }
-  .cover-logo {
-    margin: 5px 0;
-    padding: 0;
+  .btn-home {
+    width: 80%;
   }
   .features {
     padding: 30px 0 50px;
