@@ -392,14 +392,6 @@ li {
   padding-bottom: 10px;
 }
 
-.early-access-link {
-  color: #ffdd00;
-}
-.early-access-link:hover {
-  color: #FFCB00;
-  border-bottom-color: #ffcb00;
-}
-
 .navbar-page {
   border-bottom: 1px solid #f1f1f1;
   position: static;
