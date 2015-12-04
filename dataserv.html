@@ -211,9 +211,10 @@
                 <div class="divider"></div>
                 <h3>1. Install Client</h3>
                 <code>
-                  $ brew install python3<br>
+                  $ brew install python graphviz<br>
                   $ rehash<br>
-                  $ pip3 install dataserv-client<br>
+                  $ sudo pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" --install-option="--library-path=/usr/lib/graphviz/"<br>
+                  $ pip install dataserv-client<br>
                   $ dataserv-client version
                 </code>
                 <div class="divider"></div>
@@ -235,7 +236,7 @@
                 <div class="divider"></div>
                 <h3>Updating Client</h3>
                 <code>
-                  $ pip3 install dataserv-client --upgrade<br>
+                  $ pip install dataserv-client --upgrade<br>
                   $ dataserv-client version
                 </code>
               </div>
@@ -246,8 +247,10 @@
                 <div class="divider"></div>
                 <h3>1. Install Client</h3>
                 <code>
-                  $ sudo apt-get install python3-pip<br>
-                  $ sudo pip3 install dataserv-client<br>
+                  $ sudo apt-get install python python-pip graphviz<br>
+                  $ sudo apt-get install python-dev libgraphviz-dev pkg-config gcc<br>
+                  $ sudo pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" --install-option="--library-path=/usr/lib/graphviz/"<br>
+                  $ sudo pip install dataserv-client<br>
                   $ dataserv-client version
                 </code>
                 <div class="divider"></div>
@@ -269,7 +272,7 @@
                 <div class="divider"></div>
                 <h3>Updating Client</h3>
                 <code>
-                  $ sudo pip3 install dataserv-client --upgrade<br>
+                  $ sudo pip install dataserv-client --upgrade<br>
                   $ dataserv-client version
                 </code>
               </div>
