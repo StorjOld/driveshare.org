@@ -360,7 +360,23 @@ li {
 .navbar-menu {
   text-align: right;
 }
-
+.navbar-toggle {
+  border: 1px solid #fff;
+}
+.navbar-toggle .icon-bar {
+  background: #fff;
+  border-radius: 0;
+}
+.navbar-brand>img {
+    display: inline-block;
+}
+.navbar li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.navbar-header {
+  margin-top: 0.5em;
+}
 .navbar-link {
   color: #E4F1FF;
   display: inline-block;
@@ -378,6 +394,7 @@ li {
   color: #fff;
   border-bottom: 2px solid #fff;
   padding-bottom: 10px;
+  background-color: transparent !important;
 }
 
 .navbar-page {
@@ -548,12 +565,12 @@ li {
 }
 
 .preview {
-  margin: 45px auto 100px;
+  margin: 15px auto 60px;
   background: url('../img/driveshare.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height: 420px;
-  width: 420px;
+  height: 480px;
+  width: 480px;
 }
 
 
@@ -888,29 +905,6 @@ th {
  * Responsiveness
 */
 
-@media all and (max-width: 1200px) and (min-width: 990px) {
-  .features-icon-right {
-    margin-right: 0;
-  }
-  .features-text-left {
-    padding-left: 0;
-    margin-left: -20px;
-  }
-  .cover-heading {
-    font-size: 48px;
-    line-height: 48px;
-  }
-  .cover-description {
-    font-size: 18px;
-  }
-  .preview {
-    height: 380px;
-    width: 380px;
-  }
-  .btn-home {
-    padding: 20px 30px;
-  }
-}
 
 @media all and (min-width: 991px) {
   .cover-description,
@@ -927,6 +921,34 @@ th {
   }
   .btn-home {
     margin-left: 0 !important;
+  }
+  .preview {
+    margin-top: 0;
+  }
+}
+
+@media all and (max-width: 1200px) and (min-width: 990px) {
+  .features-icon-right {
+    margin-right: 0;
+  }
+  .features-text-left {
+    padding-left: 0;
+    margin-left: -20px;
+  }
+  .cover-heading {
+    font-size: 48px;
+    line-height: 48px;
+    margin-top: 40px;
+  }
+  .cover-description {
+    font-size: 18px;
+  }
+  .preview {
+    height: 380px;
+    width: 380px;
+  }
+  .btn-home {
+    padding: 20px 30px;
   }
 }
 
@@ -978,10 +1000,6 @@ th {
 @media all and (max-width: 768px) {
   .cover-container {
     margin: 20px auto 0
-  }
-  .cover-logo {
-    text-align: center;
-    margin-top: 20px;
   }
   .mobile-link {
     width: 120px;
@@ -1037,14 +1055,13 @@ th {
     padding: 0;
   }
   .cover-container {
-    margin: 40px auto 0;
+    margin: 20px auto 0;
   }
   .cover-wrapper-inner {
     text-align: center;
   }
   .cover-logo {
-    width: 100%;
-    margin: 5px 0;
+    margin: 10px 0 0;
     padding: 0;
   }
   .cover-heading {
