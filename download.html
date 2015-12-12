@@ -82,6 +82,7 @@
               <a href="https://github.com/Storj/driveshare-gui/releases/download/0.4.1/DriveShare_0.4.1.win32.exe" class="btn btn-green btn-download" id="download-windows">Windows</a>
               <a href="https://github.com/Storj/driveshare-gui/releases/download/0.4.1/DriveShare_0.4.1.osx64.dmg" class="btn btn-green btn-download" id="download-osx">Mac OS X</a>
               <a href="https://github.com/Storj/driveshare-gui/releases/download/0.4.1/DriveShare_0.4.1_amd64.deb" class="btn btn-green btn-download" id="download-linux">Linux</a>
+              <a href="https://github.com/Storj/driveshare-gui/" class="btn btn-download" id="download-source">Download Source Code</a>
             </div>
           </div>
 
@@ -270,6 +271,9 @@
         });
         $('#download-linux').on('click', function() {
           ga('send', 'event', 'GUI', 'Download', 'Linux', 1);
+        });
+        $('#download-source').on('click', function() {
+          ga('send', 'event', 'GUI', 'Download', 'Source', 1);
         });
 
         // Smooth Page Scroll
