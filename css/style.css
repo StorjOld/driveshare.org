@@ -573,6 +573,14 @@ li {
   width: 480px;
 }
 
+.download-icon {
+  margin-right: 12px;
+}
+.download-osx {
+  top: -3px;
+  position: relative;
+}
+
 
 /*
  * Features
