@@ -785,7 +785,8 @@ li {
 
 .driveshare-gui {
   max-width: 420px;
-  margin: 0 auto;
+  margin: 1em auto;
+  width: 100%;
 }
 
 .exchange-logo {
