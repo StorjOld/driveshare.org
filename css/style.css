@@ -382,6 +382,11 @@ li {
 .navbar-header {
   margin-top: 0.5em;
 }
+.navbar-collapse {
+    border-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 .navbar-link {
   color: #E4F1FF;
   display: inline-block;
