@@ -2,7 +2,7 @@
  * Import Fonts
  */
 
-@import url(http://fonts.googleapis.com/css?family=Work+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
 
 
 /*
@@ -34,6 +34,9 @@ p {
   font-weight: 400;
   line-height: 34px;
   color: #333;   
+}
+b, strong {
+  font-weight: 600;
 }
 
 a,
@@ -505,7 +508,14 @@ li {
   margin-bottom: 0.6em;
   font-size: 38px;
 }
-.cover-intro p {
+.cover-intro h1,
+.cover-intro h2,
+.cover-intro h3,
+.cover-intro h4,
+.cover-intro h5,
+.cover-intro h6,
+.cover-intro p,
+.cover-intro span {
   color: #fff;
 }
 .cover-intro a {
@@ -894,6 +904,121 @@ th {
 .cover-stats .title-sm {
   margin-top: 0.5em;
   margin-bottom: 0.3em;
+}
+
+
+/*
+ * Rewards
+*/
+
+.rewards .intro {
+  margin-top: 3.6em;
+}
+
+.rewards .payment {
+  margin-bottom: 3em;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.icon-rewards {
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.progress {
+  height: 42px;
+  background-color: #26527E;
+}
+.progress-bar {
+  -webkit-transition: all 2.5s ease-out;
+  -moz-transition: all 2.5s ease-out;
+  -o-transition: all 2.5s ease-out;
+  transition: all 2.5s ease-out;
+  /*width: 65%;*/
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 42px;
+}
+.progress-bar-success {
+    background-color: #88C425;
+}
+
+#sjcx {
+    font-size: 64px;
+}
+
+.rewards .thumbs {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  width: 290px;
+  height: 181px;
+}
+.rewards .step-1 {
+  background: url('../img/sjcx-step1.jpg') no-repeat;
+  background-size: 290px 181px;
+}
+.rewards .step-2 {
+  background: url('../img/sjcx-step2.jpg') no-repeat;
+  background-size: 290px 181px;
+}
+.rewards .step-3 {
+  background: url('../img/sjcx-step3.jpg') no-repeat;
+  background-size: 290px 181px;
+}
+
+.panel-group .panel+.panel {
+    margin-top: 16px;
+}
+.panel-default {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 3px;
+  border: 1px solid #eee;
+}
+.panel-default>.panel-heading {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 0;
+}
+.panel-title {
+  border-radius: 3px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.panel-title a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  color: #107fc9;
+  border-radius: 3px;
+}
+.panel-title [data-toggle="collapse"].collapsed {
+  background: #fff;
+}
+.panel-title a.collapsed {
+  color: #107fc9 !important;
+}
+.panel-body {
+  padding: 20px 30px 15px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.panel-body p {
+  line-height: 32px;
+}
+.panel-body ul {
+  color: #107fc9;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #eee;
+    border-left: none;
+    border-right: none;
 }
 
 /*
