@@ -206,7 +206,7 @@
           ga('send', 'event', 'SignUp', 'Newsletter', 'Footer', 1);
         });
 
-        $.getJSON("http://switch.driveshare.org/api/total", function(json){
+        $.getJSON("http://status.driveshare.org/api/total", function(json){
             var storageCount = json.total_TB;
             var count = new CountUp("storage-count", 0, storageCount, 0, 2.5);
             count.start();
