@@ -93,7 +93,7 @@
       </div>
     </div>
 
-    <div class="features grey">    
+    <div class="features grey">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -198,11 +198,11 @@
             </div>
             <span class="promise">*Not a guarantee. Earnings are based on full network availability and demand.</span>
           </div>
-        </div> 
-      </div> 
+        </div>
+      </div>
     </div>
 
-    <div class="features">    
+    <div class="features">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-6">
@@ -214,11 +214,11 @@
             <div class="divider"></div>
             <p class="subtitle">Once downloaded, the application presents a simple user interface where you can check your current balance and hard drive space statistics. Just one click to earn money.</p>
           </div>
-        </div> 
-      </div> 
+        </div>
+      </div>
     </div>
 
-    <div class="features grey">    
+    <div class="features grey">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -231,11 +231,11 @@
             <p class="subtitle">DriveShare is open source software, powered by the <a href="http://storj.io" class="link">Storj</a> network. You can contribute to the code development on <a href="http://github.com/Storj/" class="link">GitHub</a> or share ideas with the community on <a href="http://slack.storj.io/" class="link">Slack</a>.
             </p>
           </div>
-        </div> 
-      </div> 
+        </div>
+      </div>
     </div>
 
-    <div class="features">    
+    <div class="features">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-6">
@@ -247,19 +247,19 @@
             <div class="divider"></div>
             <p class="subtitle">By sharing your hard drive, you become a member of <a href="http://storj.io" class="link">Storj</a>, the next-generation Cloud Storage Network, where users are always in total control of their data.</p>
           </div>
-        </div> 
-      </div> 
-    </div> 
+        </div>
+      </div>
+    </div>
 
     <div class="c2a-section" id="sign-up">
       <div class="container">
-        <form class="form-inline text-center validate" role="form" action="http://storj.us8.list-manage.com/subscribe/post?u=edba9fc4ce8b9095a31859cba&amp;id=0b1509efa2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+        <form class="form-inline text-center validate" role="form" action="https://storj.us8.list-manage.com/subscribe/post?u=edba9fc4ce8b9095a31859cba&amp;id=0b1509efa2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <h1 class="title">Would you like to know more?</h1>
               <p class="subtitle">We are adding the finishing touches to our beta software. Sign up for the newsletter to get updates on our progress, info on the project, and early access to the application when it is production ready.</p>
             </div>
-          </div> 
+          </div>
           <div class="row">
             <div class="col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
               <div class="input-group">
@@ -275,7 +275,7 @@
           </div>
         </form>
       </div>
-      <div class="footer"> 
+      <div class="footer">
         <div class="container">
           <div class="row">
             <a class="footer-link" href="http://storj.io">Powered by <img src="img/footer-logo@2x.png" alt="Storj" class="footer-logo"> Storj.io</a>
@@ -316,30 +316,30 @@
         });
 
         // calculates momthly cost of running a PC 24/7 for
-        // PC purchase price in dollars, PC power consumption in watts, 
+        // PC purchase price in dollars, PC power consumption in watts,
         // electricty rates in dollars/kilowatt hour, number of drives in PC.
         function calculateCost(pcCost, pcPowerConsumption, elecRate, drives, regularUptime)
         {
             var HARD_DRIVE_COST = 60,    // cost in dollars of a hard drive
                 ANNUITIZATION_YEARS = 4, // years to annuitize the investment
                 HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
-            
+
             var cost,           // total monthly cost of running the system
                 perDriveCost,   // cost per additional hard drive
                 additionalCost; // cost of changing from normal computer use to 100% uptime
-            
+
             // monthly per-drive cost = drive's annuitized cost + electricity costs
             perDriveCost = (HARD_DRIVE_COST / (12 * ANNUITIZATION_YEARS)) +
                 (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
-            
-            // monthly PC cost = annuitized cost + 
+
+            // monthly PC cost = annuitized cost +
             // electricity costs + per drive cost for drives beyond the first
-            cost = (pcCost / (12 * ANNUITIZATION_YEARS)) + 
+            cost = (pcCost / (12 * ANNUITIZATION_YEARS)) +
                 (pcPowerConsumption * (30 * 24) * elecRate / 1000) +
                 ((drives - 1) * perDriveCost);
-            
+
              additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
-            
+
             return additionalCost;
         }
 
@@ -347,25 +347,25 @@
         function calculateElecCost(pcPowerConsumption, elecRate, drives, regularUptime)
         {
             var HARD_DRIVE_WATTAGE = 15;  // read/write power consumption for normal hdd
-            
+
             var cost,           // total monthly cost of running the system
                 perDriveCost,   // cost per additional hard drive
                 additionalCost; // cost of changing from normal computer use to 100% uptime
-            
+
             // monthly per-drive cost = electricity costs
             perDriveCost = (HARD_DRIVE_WATTAGE * (30 * 24) * elecRate / 1000);
-            
+
             // monthly PC cost = electricity costs + per drive cost for drives beyond the first
             cost = (pcPowerConsumption * (30 * 24) * elecRate / 1000) + ((drives - 1) * perDriveCost);
-            
+
             additionalCost = cost * ((24 - regularUptime) / 24); // regular uptime doesn't count for cost
-            
+
             return additionalCost;
         }
 
-        // calculates revenue from storage space in GB and a rate in dollars per GB 
+        // calculates revenue from storage space in GB and a rate in dollars per GB
         function calculateRevenue(storageSpace, rate)
-        {   
+        {
             return storageSpace * rate;
         }
 
@@ -395,11 +395,11 @@
             var drivesNumber = $("#txtDrives").val();
             // var uptime = $("#txtUptime").val();
             var uptime = 4;
-            
+
             var elecCost = badRound(calculateElecCost(powerUsage, electricityCost, drivesNumber, uptime), 2);
             var revenue = badRound(calculateRevenue(spaceForRent, .03), 2);
             var profit = badRound(calculateProfit(elecCost, revenue), 2);
-            
+
             $("#lblProfit").val(profit);
         });
 
@@ -418,7 +418,7 @@
         //    $('.countries-count').html(countriesCount);
         //  });
 
-        $.getJSON("http://status.driveshare.org/api/total", function(json){
+        $.getJSON("https://status.driveshare.org/api/total", function(json){
           var farmersCount = json.total_farmers;
           var storageCount = json.total_TB;
           $('.farmers-count').html(farmersCount);
@@ -428,5 +428,5 @@
       });
     </script>
 
-  </body> 
+  </body>
 </html>
