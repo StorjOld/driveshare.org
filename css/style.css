@@ -2,7 +2,7 @@
  * Import Fonts
  */
 
-@import url(http://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
 
 
 /*
@@ -33,7 +33,7 @@ p {
   font-size: 17px;
   font-weight: 400;
   line-height: 34px;
-  color: #333;   
+  color: #333;
 }
 b, strong {
   font-weight: 600;
@@ -89,7 +89,7 @@ a:hover {
   font-size: 17px;
   font-weight: 400;
   line-height: 38px;
-  color: #333;   
+  color: #333;
 }
 
 .title-sm {
@@ -155,7 +155,7 @@ li {
 }
 
 .grey {
-  background: #f9f9f9; 
+  background: #f9f9f9;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
@@ -559,13 +559,13 @@ li {
   color: #999;
 }
 .email:-moz-placeholder { /* Firefox 18- */
-  color: #999;  
+  color: #999;
 }
 .email::-moz-placeholder {  /* Firefox 19+ */
-  color: #999;  
+  color: #999;
 }
-.email:-ms-input-placeholder {  
-  color: #999;  
+.email:-ms-input-placeholder {
+  color: #999;
 }
 
 .promise {
@@ -633,8 +633,8 @@ li {
 }
 
 .features-text {
-  text-align: justify; 
-  overflow: auto; 
+  text-align: justify;
+  overflow: auto;
   max-width: 515px;
 }
 
@@ -859,7 +859,7 @@ li {
 }
 th {
   text-transform: uppercase;
-  color: #107fc9; 
+  color: #107fc9;
   padding-bottom: 1em !important;
   padding-top: 1em !important;
 }
@@ -1025,7 +1025,7 @@ th {
  * Retina
 */
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .features-icon-0 {
     background-image: url('../img/features-0@2x.jpg');
   }
@@ -1042,7 +1042,7 @@ th {
     background: url('../img/driveshare@2x.png');
     background-size: contain;
     background-repeat: no-repeat;
-  } 
+  }
 }
 
 /*
@@ -1231,7 +1231,7 @@ th {
   }
   .input-group {
     width: 90%;
-  } 
+  }
   .promise {
     font-size: 10px;
   }
