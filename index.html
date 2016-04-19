@@ -78,7 +78,7 @@
               <h1 class="cover-heading">
                 Earn money by sharing your<br class="visible-xs visible-sm"> extra hard drive space
               </h1>
-              <p class="cover-description">There are <a href="status.html" class="link"><span class="farmers-count"></span></a> live beta testers in <a href="http://storj.io/earlyaccess.html" class="link">Test Group B</a>, <br class="hidden-xs">sharing <a href="status.html" class="link"><span class="storage-count"></span> TB</a> storage &amp; <a href="rewards.html" class="link">earning rewards</a>.</p>
+              <p class="cover-description"><b>Be the Cloud!</b> Join the <a href="status.html" class="link"><span class="farmers-count"></span></a> beta testers that are <br class="hidden-xs">sharing <a href="status.html" class="link"><span class="storage-count"></span> TB</a> storage and <a href="rewards.html" class="link">earning rewards</a>.</p>
               <div class="cover-buttons">
                 <a href="download.html" class="btn btn-green btn-home">Download Now</a>
                 <a href="rewards.html" class="btn btn-home">Rewards Info</a>
@@ -403,24 +403,9 @@
             $("#lblProfit").val(profit);
         });
 
-        // $.getJSON("https://live.driveshare.org/api/downstream/v1/status/list/by/d/uptime", function(json) {
-        //    var farmers = $.grep(json.farmers, function(n){ return n.online });
-        //    var farmersCount = farmers.length;
-        //    var countries = [];
-        //    for (var j = 0; j < farmersCount; j++) {
-        //        var country = farmers[j].location.country;
-        //        if (countries.indexOf(country) === -1) {
-        //            countries.push(country);
-        //        }
-        //    }
-        //    var countriesCount = countries.length;
-        //    $('.farmers-count').html(farmersCount);
-        //    $('.countries-count').html(countriesCount);
-        //  });
-
         $.getJSON("https://status.driveshare.org/api/total", function(json){
           var farmersCount = json.total_farmers;
-          var storageCount = json.total_TB;
+          var storageCount = Math.round(json.total_TB);
           $('.farmers-count').html(farmersCount);
           $('.storage-count').html(storageCount);
         });
